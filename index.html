@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.classList.add('js')</script>
+
+<!--
+  ============================================================================
+  Matrix3D · sitio construido por Mattera Systems
+  PLACEHOLDERS antes de publicar (buscar y reemplazar en todo el proyecto):
+    523300000000            → WhatsApp real (52 + LADA + número, sin signos)  [también en js/config.js]
+    +52 33 0000 0000        → WhatsApp real formateado
+    hola@matrix3d.mx        → correo real
+    https://matrix3d.mx     → dominio real
+    20.6597 / -103.3496     → latitud / longitud reales (hoy: centro de Guadalajara)
+    @matrix3d               → usuarios reales de TikTok, Instagram y Facebook
+    https://example.com/mascota → sistema de perfiles NFC del cliente
+  Lista completa en HANDOFF.md
+  ============================================================================
+-->
+
+<title>Impresión y diseño 3D en Guadalajara | Matrix3D</title>
+<meta name="description" content="Diseño 3D a medida, impresión 3D bajo pedido, llaves de permiso para escuelas y llaveros NFC para mascotas en Guadalajara. Cotiza gratis por WhatsApp y recibe en todo México.">
+<link rel="canonical" href="https://matrix3d.mx/">
+<link rel="alternate" hreflang="es-MX" href="https://matrix3d.mx/">
+<link rel="alternate" hreflang="x-default" href="https://matrix3d.mx/">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Matrix3D">
+<meta name="geo.region" content="MX-JAL">
+<meta name="geo.placename" content="Guadalajara, Jalisco">
+<meta name="geo.position" content="20.6597;-103.3496">
+<meta name="ICBM" content="20.6597, -103.3496">
+<meta name="theme-color" content="#FFFFFF">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="Matrix3D">
+<meta property="og:url" content="https://matrix3d.mx/">
+<meta property="og:title" content="Matrix3D | Diseño e impresión 3D en Guadalajara">
+<meta property="og:description" content="Modelamos tu idea, la imprimimos capa por capa y la enviamos a todo México. Cotiza gratis por WhatsApp.">
+<meta property="og:image" content="https://matrix3d.mx/assets/img/og-matrix3d.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Matrix3D, taller de diseño e impresión 3D en Guadalajara">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Matrix3D | Diseño e impresión 3D en Guadalajara">
+<meta name="twitter:description" content="Modelamos tu idea, la imprimimos capa por capa y la enviamos a todo México.">
+<meta name="twitter:image" content="https://matrix3d.mx/assets/img/og-matrix3d.jpg">
+
+<link rel="icon" href="assets/icons/favicon-48.png" sizes="48x48" type="image/png">
+<link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="alternate" type="text/markdown" title="Resumen para asistentes de IA" href="llms.txt">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- ===================== DATOS ESTRUCTURADOS (SEO + GEO) ===================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "Organization"],
+      "@id": "https://matrix3d.mx/#negocio",
+      "name": "Matrix3D",
+      "description": "Taller de diseño 3D e impresión 3D en Guadalajara, Jalisco. Modelado 3D a medida, impresión 3D bajo pedido, llaves de permiso para escuelas, llaveros NFC para mascotas y productos virales. Envíos a todo México.",
+      "url": "https://matrix3d.mx/",
+      "logo": { "@type": "ImageObject", "url": "https://matrix3d.mx/assets/img/logo-matrix3d.png", "width": 820, "height": 955 },
+      "image": "https://matrix3d.mx/assets/img/og-matrix3d.jpg",
+      "telephone": "+523300000000",
+      "email": "hola@matrix3d.mx",
+      "priceRange": "$$",
+      "currenciesAccepted": "MXN",
+      "paymentAccepted": "Transferencia, depósito, efectivo en entregas locales",
+      "address": { "@type": "PostalAddress", "addressLocality": "Guadalajara", "addressRegion": "Jalisco", "addressCountry": "MX" },
+      "geo": { "@type": "GeoCoordinates", "latitude": 20.6597, "longitude": -103.3496 },
+      "areaServed": [
+        { "@type": "City", "name": "Guadalajara" }, { "@type": "City", "name": "Zapopan" },
+        { "@type": "City", "name": "Tlaquepaque" }, { "@type": "City", "name": "Tonalá" },
+        { "@type": "City", "name": "Tlajomulco de Zúñiga" }, { "@type": "Country", "name": "México" }
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday","https://schema.org/Thursday","https://schema.org/Friday"], "opens": "10:00", "closes": "19:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "10:00", "closes": "14:00" }
+      ],
+      "knowsAbout": ["Impresión 3D", "Diseño 3D", "Modelado 3D", "Fabricación aditiva", "Filamento PLA", "Filamento PETG", "Filamento TPU", "Etiquetas NFC", "Material para escuelas"],
+      "contactPoint": { "@type": "ContactPoint", "telephone": "+523300000000", "contactType": "sales", "availableLanguage": ["es"], "areaServed": "MX" },
+      "sameAs": ["https://www.tiktok.com/@matrix3d", "https://www.instagram.com/matrix3d", "https://www.facebook.com/matrix3d"],
+      "hasOfferCatalog": { "@id": "https://matrix3d.mx/#catalogo" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://matrix3d.mx/#sitio",
+      "url": "https://matrix3d.mx/",
+      "name": "Matrix3D",
+      "inLanguage": "es-MX",
+      "publisher": { "@id": "https://matrix3d.mx/#negocio" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://matrix3d.mx/#pagina",
+      "url": "https://matrix3d.mx/",
+      "name": "Impresión y diseño 3D en Guadalajara | Matrix3D",
+      "isPartOf": { "@id": "https://matrix3d.mx/#sitio" },
+      "about": { "@id": "https://matrix3d.mx/#negocio" },
+      "inLanguage": "es-MX"
+    },
+    {
+      "@type": "Service",
+      "@id": "https://matrix3d.mx/#diseno-3d",
+      "name": "Diseño 3D a medida",
+      "serviceType": "Modelado 3D",
+      "description": "Modelado 3D a partir de una idea, foto, dibujo o medidas, listo para imprimir.",
+      "provider": { "@id": "https://matrix3d.mx/#negocio" },
+      "areaServed": { "@type": "Country", "name": "México" }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://matrix3d.mx/#impresion-3d",
+      "name": "Impresión 3D bajo pedido",
+      "serviceType": "Impresión 3D",
+      "description": "Impresión 3D de archivos STL, 3MF u OBJ en PLA, PETG y TPU: piezas únicas, refacciones, figuras por encargo y pedidos por volumen.",
+      "provider": { "@id": "https://matrix3d.mx/#negocio" },
+      "areaServed": { "@type": "Country", "name": "México" }
+    },
+    {
+      "@type": "OfferCatalog",
+      "@id": "https://matrix3d.mx/#catalogo",
+      "name": "Productos impresos en 3D",
+      "itemListElement": [
+        { "@type": "Product", "@id": "https://matrix3d.mx/#llaves-de-permiso", "name": "Llaves de permiso para salón de clases", "description": "Tablero con llaves impresas en 3D para controlar los permisos del salón: baño, salida y emergencia.", "image": "https://matrix3d.mx/assets/img/permisos-900.webp", "category": "Escuelas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
+        { "@type": "Product", "@id": "https://matrix3d.mx/#llaves-bano", "name": "Llaves de baño niño y niña", "description": "Juego de dos llaves impresas en 3D con tablero “Baños” para preescolar y primaria.", "image": "https://matrix3d.mx/assets/img/banos-900.webp", "category": "Escuelas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
+        { "@type": "Product", "@id": "https://matrix3d.mx/#porta-papel-lapiz", "name": "Porta papel higiénico en forma de lápiz", "description": "Porta rollo impreso en 3D con forma de lápiz gigante y ranura frontal.", "image": "https://matrix3d.mx/assets/img/lapiz-900.webp", "category": "Hogar", "brand": { "@type": "Brand", "name": "Matrix3D" } },
+        { "@type": "Product", "@id": "https://matrix3d.mx/#llavero-nfc", "name": "Llavero NFC para mascotas y redes sociales", "description": "Llavero impreso en 3D con chip NFC que abre el perfil de contacto de la mascota o tus redes al acercar un celular.", "image": "https://matrix3d.mx/assets/img/llaveros-900.webp", "category": "Mascotas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
+        { "@type": "Product", "@id": "https://matrix3d.mx/#figura-por-encargo", "name": "Figura coleccionable por encargo", "description": "Figuras impresas en 3D a pedido, en dos colores y con textura detallada.", "image": "https://matrix3d.mx/assets/img/kaiju-900.webp", "category": "Por encargo", "brand": { "@type": "Brand", "name": "Matrix3D" } }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "Cómo pedir una pieza impresa en 3D a Matrix3D",
+      "step": [
+        { "@type": "HowToStep", "position": 1, "name": "Cuéntanos tu idea", "text": "Por WhatsApp: una foto, un dibujo, medidas o tu archivo STL." },
+        { "@type": "HowToStep", "position": 2, "name": "Te cotizamos y diseñamos", "text": "Te mandamos precio y tiempo de entrega por WhatsApp; al confirmar, modelamos tu pieza en 3D." },
+        { "@type": "HowToStep", "position": 3, "name": "Lo imprimimos", "text": "Capa por capa, en el material y los colores que elegiste." },
+        { "@type": "HowToStep", "position": 4, "name": "Te lo entregamos", "text": "En la zona metropolitana de Guadalajara o por paquetería a todo México." }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Cuánto cuesta imprimir una pieza en 3D en Guadalajara?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, el material y las horas de impresión. Matrix3D cotiza cada pieza sin costo: manda por WhatsApp una foto, las medidas o tu archivo STL y te respondemos con precio y tiempo de entrega." } },
+        { "@type": "Question", "name": "¿Cuánto tarda un pedido?", "acceptedAnswer": { "@type": "Answer", "text": "Los productos de catálogo están listos de 2 a 5 días hábiles. Las piezas con diseño 3D a medida dependen de la complejidad del modelo; la fecha exacta se confirma al aprobar la cotización." } },
+        { "@type": "Question", "name": "¿Hacen envíos fuera de Guadalajara?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Entregamos en la zona metropolitana de Guadalajara y enviamos por paquetería a todo México." } },
+        { "@type": "Question", "name": "¿Puedo mandar mi propio archivo para imprimir?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Recibimos archivos STL, 3MF y OBJ. Revisamos que el modelo sea imprimible antes de cotizar." } },
+        { "@type": "Question", "name": "¿Qué pasa si no tengo un archivo 3D, solo la idea?", "acceptedAnswer": { "@type": "Answer", "text": "Lo diseñamos por ti. Con una foto, un dibujo o medidas creamos el modelo 3D y lo imprimimos." } },
+        { "@type": "Question", "name": "¿Con qué materiales imprimen?", "acceptedAnswer": { "@type": "Answer", "text": "PLA para piezas decorativas, PETG para piezas resistentes al uso diario y TPU para piezas flexibles." } },
+        { "@type": "Question", "name": "¿Para qué sirven las llaves de permiso en un salón de clases?", "acceptedAnswer": { "@type": "Answer", "text": "Controlan las salidas del salón sin interrumpir la clase: cada llave es un permiso (baño, salida o emergencia). El alumno la toma al salir y la regresa al volver, así el docente sabe quién está fuera y a dónde fue." } },
+        { "@type": "Question", "name": "¿Cómo funciona el llavero NFC para mascotas?", "acceptedAnswer": { "@type": "Answer", "text": "El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con el nombre de la mascota y los datos de contacto del dueño. No usa batería ni requiere aplicación; funciona con iPhone XS o más reciente y con Android con NFC." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- ============================ HEADER ============================ -->
+<header class="top" data-top>
+  <div class="top__in wrap">
+    <a class="brand" href="#inicio" aria-label="Matrix3D, ir al inicio">
+      <img class="brand__mark" src="assets/img/logo-mark-160.webp" width="33" height="40" alt="">
+      <span class="brand__word">Matrix<b>3D</b></span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#escuelas">Escuelas</a></li>
+        <li><a href="#nfc">Llavero NFC</a></li>
+        <li><a href="#proceso">Cómo pedir</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn--sm top__cta" data-wa="general" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-movil" data-menu-btn>
+      <span class="sr">Abrir menú</span><i></i><i></i><i></i>
+    </button>
+  </div>
+  <div class="menu-movil" id="menu-movil" hidden data-menu>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#escuelas">Escuelas</a></li>
+      <li><a href="#nfc">Llavero NFC</a></li>
+      <li><a href="#proceso">Cómo pedir</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+    </ul>
+    <a class="btn" data-wa="general" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+  </div>
+</header>
+
+<main id="contenido">
+
+<!-- ============================ HERO: la impresora imprime el isotipo ============================ -->
+<section class="hero" id="inicio" data-hero aria-labelledby="hero-titulo">
+  <div class="hero__stage">
+    <div class="hero__grid wrap">
+      <div class="hero__copy">
+        <p class="kicker">Taller de impresión 3D en Guadalajara</p>
+        <h1 id="hero-titulo" class="hero__title">Diseño e impresión&nbsp;3D en&nbsp;Guadalajara</h1>
+        <p class="hero__lead">Convertimos tu idea en una pieza real: la modelamos en 3D, la imprimimos capa por capa y te la enviamos a cualquier parte de México.</p>
+        <div class="hero__ctas">
+          <a class="btn" data-wa="hero" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+          <a class="btn btn--ghost" href="#trabajos">Ver trabajos</a>
+        </div>
+      </div>
+
+      <div class="hero__machine">
+        <div class="printer" data-printer data-src="assets/img/logo-print-720.webp">
+          <!-- Sin JS: se muestra el logo original terminado -->
+          <img class="printer__fallback" src="assets/img/logo-matrix3d-480.webp" width="480" height="559" alt="Logo de Matrix3D" fetchpriority="high">
+        </div>
+        <div class="console" aria-hidden="true" data-console>
+          <div class="console__head">
+            <span data-c-status>Pieza terminada</span>
+            <span class="console__pct" data-c-pct>100%</span>
+          </div>
+          <div class="console__bar"><i data-c-bar></i></div>
+          <ol class="console__log" data-c-log>
+            <li>; matrix3d.gcode</li>
+            <li>G28 ; home</li>
+            <li>M104 S210 ; boquilla 210 °C</li>
+          </ol>
+          <div class="console__foot"><span>Capa <b data-c-layer>48</b>/48</span><span>PLA morado</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="hero__hint" aria-hidden="true" data-hint><span></span>Desliza para imprimir</p>
+  </div>
+</section>
+
+<!-- ============================ CINTA ============================ -->
+<div class="tape" aria-hidden="true">
+  <div class="tape__row" data-tape>
+    <span>Diseño 3D</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+    <span>Impresión 3D</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+    <span>Llaves escolares</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+    <span>Llaveros NFC</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+    <span>Figuras por encargo</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+    <span>Lo viral de TikTok</span><svg viewBox="0 0 30 34"><rect x="3" y="0" width="24" height="14" rx="3"/><path d="M9 14h12l-4 10h-4z"/></svg>
+  </div>
+</div>
+
+<!-- ============================ SERVICIOS ============================ -->
+<section class="section wrap" id="servicios" aria-labelledby="servicios-titulo">
+  <div class="head">
+    <h2 id="servicios-titulo">Del archivo a tus manos</h2>
+    <p>Matrix3D es un taller de diseño e impresión 3D en Guadalajara. Hacemos tres cosas, y las hacemos bien.</p>
+  </div>
+  <div class="slabs">
+    <article class="slab" data-slab id="diseno-3d">
+      <svg class="slab__icon" viewBox="0 0 120 100" aria-hidden="true" data-draw>
+        <path d="M60 10 98 32v44L60 98 22 76V32z" />
+        <path d="M22 32l38 22 38-22M60 54v44" />
+        <path class="accent" d="M60 10v44M22 32l38 22" stroke-dasharray="3 4"/>
+        <circle cx="60" cy="54" r="3.5" class="dot"/>
+      </svg>
+      <h3>Diseño 3D a medida</h3>
+      <p>Si solo tienes la idea, una foto o un dibujo, creamos el modelo 3D listo para imprimir, con las medidas que necesitas.</p>
+      <ul class="ticks"><li>Refacciones que ya no se consiguen</li><li>Regalos y piezas personalizadas</li><li>Prototipos de producto</li></ul>
+      <a class="link" data-wa="diseno" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar un diseño</a>
+    </article>
+    <article class="slab" data-slab id="impresion-3d">
+      <svg class="slab__icon" viewBox="0 0 120 100" aria-hidden="true" data-draw>
+        <path d="M36 8h48v22H36z" />
+        <path d="M50 30h20l-6 14h-8z" />
+        <path class="accent" d="M24 92h72M30 84h60M38 76h44M46 68h28" />
+        <path d="M60 44v12" stroke-dasharray="2 3"/>
+      </svg>
+      <h3>Impresión 3D bajo pedido</h3>
+      <p>Imprimimos tu archivo STL, 3MF u OBJ, o el modelo que diseñamos contigo: piezas únicas, figuras por encargo y pedidos por volumen.</p>
+      <ul class="ticks"><li>PLA, PETG y TPU</li><li>Revisión del archivo antes de imprimir</li><li>Uno o cientos de piezas</li></ul>
+      <a class="link" data-wa="impresion" href="https://wa.me/523300000000" target="_blank" rel="noopener">Enviar mi archivo</a>
+    </article>
+    <article class="slab" data-slab id="productos">
+      <svg class="slab__icon" viewBox="0 0 120 100" aria-hidden="true" data-draw>
+        <rect x="38" y="6" width="44" height="88" rx="8" />
+        <path d="M54 14h12" />
+        <path class="accent" d="M48 64l10-12 8 8 10-16" />
+        <path class="accent" d="M70 44h6v6" />
+      </svg>
+      <h3>Productos que son tendencia</h3>
+      <p>Llaves de permiso para el salón, llaveros NFC para mascotas, porta rollos con forma de lápiz y lo que se vuelva viral en TikTok.</p>
+      <ul class="ticks"><li>Listos para pedir</li><li>Colores y texto personalizables</li><li>Envíos a todo México</li></ul>
+      <a class="link" href="#trabajos">Ver productos</a>
+    </article>
+  </div>
+</section>
+
+<!-- ============================ ESCENA: del boceto a la pieza ============================ -->
+<section class="story story--md" id="como-disenamos" aria-labelledby="disenamos-titulo" data-design>
+  <div class="story__stage">
+    <div class="story__grid wrap">
+      <div class="story__copy">
+        <p class="kicker">Diseño 3D a medida</p>
+        <h2 id="disenamos-titulo">De un dibujo en papel a un modelo listo para imprimir</h2>
+        <p class="lead">No necesitas saber de 3D. Con una foto, un boceto o unas medidas modelamos tu pieza con precisión de milímetros.</p>
+        <ol class="steps" data-scene-steps>
+          <li class="is-on"><b>1</b><span>Nos mandas tu idea: un dibujo, una foto o las medidas.</span></li>
+          <li><b>2</b><span>La modelamos en 3D con las medidas exactas.</span></li>
+          <li><b>3</b><span>Lo dejamos listo para imprimir en el material que elijas.</span></li>
+        </ol>
+        <a class="btn" data-wa="diseno" href="https://wa.me/523300000000" target="_blank" rel="noopener">Mandar mi idea</a>
+      </div>
+      <div class="story__art">
+        <svg class="scene" viewBox="0 0 440 400" role="img" aria-labelledby="dis-t">
+          <title id="dis-t">Un boceto en papel se convierte en un modelo 3D en la computadora</title>
+          <!-- Monitor -->
+          <g data-monitor>
+            <rect class="depth" x="222" y="70" width="200" height="140" rx="10"/>
+            <rect class="body" x="214" y="62" width="200" height="140" rx="10"/>
+            <rect class="screen" x="226" y="74" width="176" height="104" rx="4"/>
+            <g class="dots"><circle cx="234" cy="82" r="2.2"/><circle cx="242" cy="82" r="2.2"/><circle cx="250" cy="82" r="2.2"/></g>
+            <path class="body" d="M300 202l-8 30h44l-8-30z"/>
+            <rect class="depth" x="270" y="232" width="88" height="8" rx="4"/>
+            <g transform="translate(-6 6)">
+              <path class="solid-back" data-solid d="M258.0 160.0L348.0 160.0L348.0 151.6L286.8 151.6L315.6 79.6L306.0 76.0L270.0 160.0Z"/>
+              <path class="solid-front" data-solid d="M240.0 170.0L330.0 170.0L330.0 161.6L268.8 161.6L297.6 89.6L288.0 86.0L252.0 170.0Z"/>
+              <g class="wire" data-wire>
+                <path d="M258.0 160.0L348.0 160.0L348.0 151.6L286.8 151.6L315.6 79.6L306.0 76.0L270.0 160.0Z"/>
+                <path d="M240.0 170.0L258.0 160.0M330.0 170.0L348.0 160.0M330.0 161.6L348.0 151.6M268.8 161.6L286.8 151.6M297.6 89.6L315.6 79.6M288.0 86.0L306.0 76.0M252.0 170.0L270.0 160.0"/>
+                <path d="M240.0 170.0L330.0 170.0L330.0 161.6L268.8 161.6L297.6 89.6L288.0 86.0L252.0 170.0Z"/>
+              </g>
+              <g class="slices" data-slices-scan>
+                <path d="M236 166H352M236 158H352M236 150H352M236 142H352M236 134H352M236 126H352M236 118H352M236 110H352M236 102H352M236 94H352M236 86H352M236 78H352"/>
+              </g>
+            </g>
+            <g data-ok><rect class="ok" x="330" y="150" width="64" height="22" rx="11"/><text class="ok__t" x="362" y="165" text-anchor="middle">Listo</text></g>
+          </g>
+          <!-- Hoja con boceto -->
+          <g data-paper>
+            <g transform="rotate(-4 150 210)">
+              <rect class="depth" x="48" y="98" width="210" height="270" rx="8"/>
+              <rect class="paper" x="40" y="90" width="210" height="270" rx="8"/>
+              <path class="rule" d="M56 130H234M56 154H234M56 178H234M56 202H234M56 226H234M56 250H234M56 274H234M56 298H234M56 322H234"/>
+              <path class="sketch" data-sketch d="M70 320H220V306H118L166 186L150 180L90 320"/>
+              <g class="dim" data-dim><path d="M70 338H220M70 332V344M220 332V344"/><text x="145" y="356" text-anchor="middle">150 mm</text></g>
+          <!-- Lápiz (la punta está en 0,0) -->
+              <g data-pencil transform="translate(70 320)">
+                <g transform="rotate(-50)">
+                  <rect class="depth" x="25" y="-4" width="104" height="14" rx="2"/>
+                  <path class="wood" d="M0 0L22 -7V7z"/>
+                  <path class="lead-tip" d="M0 0L7 -2.2V2.2z"/>
+                  <rect class="pbody" x="22" y="-7" width="98" height="14"/>
+                  <rect class="ferrule" x="120" y="-7" width="12" height="14"/>
+                  <rect class="eraser" x="132" y="-7" width="14" height="14" rx="3"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TRABAJOS (galería horizontal) ============================ -->
+<section class="works" id="trabajos" aria-labelledby="trabajos-titulo" data-works>
+  <div class="works__pin">
+    <div class="works__head wrap">
+      <h2 id="trabajos-titulo">Recién salidos de la impresora</h2>
+      <p>Piezas reales que hemos diseñado e impreso para escuelas, hogares y clientes con ideas propias.</p>
+    </div>
+    <div class="works__viewport" data-works-viewport>
+      <ul class="works__track" data-works-track>
+        <li class="piece" id="llaves-de-permiso">
+          <div class="piece__stage">
+            <img src="assets/img/permisos-480.webp" srcset="assets/img/permisos-480.webp 480w, assets/img/permisos-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="418" height="480" alt="Tablero de permisos impreso en 3D con tres llaves: emergencia, baño y salida" loading="lazy" decoding="async" data-piece-img>
+            <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="piece__text">
+            <p class="piece__cat">Escuelas</p>
+            <h3>Llaves de permiso para salón de clases</h3>
+            <p>El alumno toma la llave de baño, salida o emergencia y el docente sabe quién salió y a dónde.</p>
+            <a class="link" data-wa="permisos" href="https://wa.me/523300000000" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </li>
+        <li class="piece" id="llaves-bano">
+          <div class="piece__stage">
+            <img src="assets/img/banos-480.webp" srcset="assets/img/banos-480.webp 480w, assets/img/banos-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="418" height="480" alt="Tablero Baños impreso en 3D con dos llaves, azul con figura de niño y rosa con figura de niña" loading="lazy" decoding="async" data-piece-img>
+            <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="piece__text">
+            <p class="piece__cat">Escuelas</p>
+            <h3>Llaves de baño niño y niña</h3>
+            <p>Dos llaves gigantes con tablero “Baños”, para preescolar y primaria. Personalizable con el nombre del grupo.</p>
+            <a class="link" data-wa="banos" href="https://wa.me/523300000000" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </li>
+        <li class="piece" id="porta-papel-lapiz">
+          <div class="piece__stage">
+            <img src="assets/img/lapiz-480.webp" srcset="assets/img/lapiz-480.webp 480w, assets/img/lapiz-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="455" height="480" alt="Porta papel higiénico impreso en 3D con forma de lápiz amarillo y ranura frontal" loading="lazy" decoding="async" data-piece-img>
+            <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="piece__text">
+            <p class="piece__cat">Hogar</p>
+            <h3>Porta papel en forma de lápiz</h3>
+            <p>Guarda el rollo dentro y lo deja a la vista por la ranura. Para baños escolares, oficinas y casa.</p>
+            <a class="link" data-wa="lapiz" href="https://wa.me/523300000000" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </li>
+        <li class="piece" id="llavero-nfc">
+          <div class="piece__stage">
+            <img src="assets/img/llaveros-480.webp" srcset="assets/img/llaveros-480.webp 480w, assets/img/llaveros-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="480" height="443" alt="Llaveros impresos en 3D con chip NFC: tres con huella de mascota y tres con íconos de redes sociales" loading="lazy" decoding="async" data-piece-img>
+            <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="piece__text">
+            <p class="piece__cat">Mascotas y redes</p>
+            <h3>Llaveros con chip NFC</h3>
+            <p>Un toque con el celular abre el perfil de tu mascota o tus redes sociales. Sin batería y sin app.</p>
+            <a class="link" data-wa="nfc" href="https://wa.me/523300000000" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </li>
+        <li class="piece" id="figura-por-encargo">
+          <div class="piece__stage">
+            <img src="assets/img/kaiju-480.webp" srcset="assets/img/kaiju-480.webp 480w, assets/img/kaiju-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="435" height="480" alt="Figura de monstruo kaiju impresa en 3D por encargo en filamento morado y azul" loading="lazy" decoding="async" data-piece-img>
+            <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <div class="piece__text">
+            <p class="piece__cat">Por encargo</p>
+            <h3>Figura coleccionable para un cliente</h3>
+            <p>Impresión en dos colores con textura detallada. Nos mandas la referencia y la imprimimos a la escala que quieras.</p>
+            <a class="link" data-wa="figura" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar una figura</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="works__progress wrap" aria-hidden="true"><i data-works-bar></i></div>
+  </div>
+</section>
+
+<!-- ============================ ESCUELAS ============================ -->
+<section class="section wrap school" id="escuelas" aria-labelledby="escuelas-titulo">
+  <div class="school__grid">
+    <div class="school__art" data-rise>
+      <img src="assets/img/permisos-480.webp" srcset="assets/img/permisos-480.webp 480w, assets/img/permisos-900.webp 900w" sizes="(min-width: 900px) 40vw, 80vw" width="418" height="480" alt="Tablero de permisos impreso en 3D con llaves de emergencia, baño y salida" loading="lazy" decoding="async">
+      <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+    <div>
+      <p class="kicker">Para escuelas</p>
+      <h2 id="escuelas-titulo">Llaves de permiso: orden en el salón sin interrumpir la clase</h2>
+      <p class="lead">Cada llave es un permiso. El docente ve de un vistazo quién salió y a dónde, y nadie tiene que pedir permiso en voz alta.</p>
+      <ol class="steps" data-steps>
+        <li><b>1</b><span>El alumno toma la llave del permiso que necesita: baño, salida o emergencia.</span></li>
+        <li><b>2</b><span>Mientras la llave no está en el tablero, nadie más sale con ese permiso.</span></li>
+        <li><b>3</b><span>Al regresar la cuelga de nuevo y el permiso queda libre.</span></li>
+      </ol>
+      <div class="row">
+        <a class="btn" data-wa="escuelas" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar para mi escuela</a>
+        <a class="btn btn--ghost" href="#llaves-bano">Ver modelos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ NFC ============================ -->
+<section class="story story--alt" id="nfc" aria-labelledby="nfc-titulo" data-nfc>
+  <div class="story__stage">
+    <div class="story__grid wrap">
+      <div class="story__art">
+        <svg class="nfc" viewBox="0 0 420 440" role="img" aria-labelledby="nfc-t">
+          <title id="nfc-t">Un celular lee el llavero NFC de una mascota y muestra los datos de contacto del dueño</title>
+          <!-- celular con grosor -->
+          <g class="phone" data-phone>
+            <rect class="phone__depth" x="232" y="40" width="160" height="320" rx="26"/>
+            <rect class="phone__body" x="224" y="32" width="160" height="320" rx="26"/>
+            <rect class="phone__screen" x="234" y="44" width="140" height="296" rx="18"/>
+            <rect class="phone__notch" x="284" y="50" width="40" height="8" rx="4"/>
+            <g class="phone__card" data-phone-card opacity="0">
+              <rect class="card" x="246" y="96" width="116" height="196" rx="12"/>
+              <circle class="avatar" cx="304" cy="136" r="24"/>
+              <path class="paw" d="M296 136a5 6 0 1 1 0 .1zm16 0a5 6 0 1 1 0 .1zM290 128a3.6 4.4 0 1 1 0 .1zm28 0a3.6 4.4 0 1 1 0 .1zM304 140c8 0 11 8 9 10-3 3-6 1-9 1s-6 2-9-1c-2-2 1-10 9-10z"/>
+              <text class="name" x="304" y="184" text-anchor="middle">Luna</text>
+              <text class="sub" x="304" y="202" text-anchor="middle">Si me encuentras,</text>
+              <text class="sub" x="304" y="216" text-anchor="middle">avisa a mi familia</text>
+              <rect class="call" x="258" y="236" width="92" height="30" rx="15"/>
+              <text class="call__t" x="304" y="256" text-anchor="middle">Llamar</text>
+            </g>
+          </g>
+          <!-- ondas NFC (trazo, sin brillo) -->
+          <g class="waves" data-waves fill="none">
+            <path d="M200 196a28 28 0 0 1 0 40"/>
+            <path d="M210 182a46 46 0 0 1 0 68"/>
+            <path d="M220 168a64 64 0 0 1 0 96"/>
+          </g>
+          <!-- llavero con huella (con grosor) -->
+          <g class="tag" data-tag>
+            <path class="tag__ring" d="M96 120a22 22 0 1 1 1 0" fill="none"/>
+            <g class="tag__body">
+              <path class="tag__depth" d="M96 150c40 0 64 30 64 66s-28 70-64 70-64-34-64-70 24-66 64-66z" transform="translate(6 6)"/>
+              <path class="tag__shape" d="M96 150c40 0 64 30 64 66s-28 70-64 70-64-34-64-70 24-66 64-66z"/>
+              <circle class="tag__hole" cx="96" cy="166" r="7"/>
+              <g class="tag__paw"><ellipse cx="76" cy="206" rx="9" ry="11"/><ellipse cx="116" cy="206" rx="9" ry="11"/><ellipse cx="62" cy="230" rx="7" ry="9"/><ellipse cx="130" cy="230" rx="7" ry="9"/><path d="M96 220c18 0 26 20 20 26-6 6-12 2-20 2s-14 4-20-2c-6-6 2-26 20-26z"/></g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div class="story__copy">
+        <p class="kicker">Mascotas</p>
+        <h2 id="nfc-titulo">Un llavero que lleva a tu mascota de vuelta a casa</h2>
+        <p class="lead">El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con su nombre y tus datos de contacto.</p>
+        <ul class="facts">
+          <li><b>Sin batería</b><span>El chip se alimenta del celular que lo lee.</span></li>
+          <li><b>Sin app</b><span>Funciona con iPhone XS o más reciente y Android con NFC.</span></li>
+          <li><b>También para redes</b><span>Un toque y abre tu Instagram, TikTok o tarjeta de presentación.</span></li>
+        </ul>
+        <div class="row">
+          <a class="btn" data-wa="nfc" href="https://wa.me/523300000000" target="_blank" rel="noopener">Pedir mi llavero</a>
+          <a class="btn btn--ghost" href="https://example.com/mascota" target="_blank" rel="noopener">Ver perfil de ejemplo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PROCESO: el pedido por WhatsApp ============================ -->
+<section class="story story--lg" id="proceso" aria-labelledby="proceso-titulo" data-chat-scene>
+  <div class="story__stage">
+    <div class="story__grid wrap">
+      <div class="story__art">
+        <svg class="scene chat" viewBox="0 0 420 460" role="img" aria-labelledby="chat-t">
+          <title id="chat-t">Conversación de WhatsApp con Matrix3D: el cliente manda su idea, recibe la cotización, confirma y recibe su pedido</title>
+          <defs>
+            <clipPath id="chat-area"><rect x="120" y="82" width="180" height="346"/></clipPath>
+            <clipPath id="chat-foto"><rect x="200" y="96" width="88" height="88" rx="9"/></clipPath>
+                        <clipPath id="chat-avatar"><circle cx="146" cy="57" r="14"/></clipPath>
+          </defs>
+          <g data-chat-phone>
+            <rect class="phone__depth" x="118" y="28" width="200" height="420" rx="30"/>
+            <rect class="phone__body" x="110" y="20" width="200" height="420" rx="30"/>
+            <rect class="chat__bg" x="120" y="32" width="180" height="396" rx="22"/>
+            <g clip-path="url(#chat-area)">
+              <g data-chat-feed>
+                <!-- 1 cliente: foto -->
+                <g class="msg me" data-msg>
+                  <rect class="b-me" x="196" y="92" width="96" height="96" rx="12"/>
+                  <rect x="200" y="96" width="88" height="88" rx="9" class="b-photo"/>
+                  <image href="assets/img/llaveros-480.webp" x="200" y="98" width="88" height="82" clip-path="url(#chat-foto)"/>
+                </g>
+                <!-- 2 cliente: texto -->
+                <g class="msg me" data-msg>
+                  <rect class="b-me" x="168" y="196" width="124" height="46" rx="12"/>
+                  <text class="t-me" x="178" y="215">¿Me lo pueden hacer</text>
+                  <text class="t-me" x="178" y="231">en morado?</text>
+                </g>
+                <!-- escribiendo -->
+                <g class="typing" data-typing="0" opacity="0"><rect class="b-them" x="128" y="252" width="52" height="26" rx="12"/><circle cx="143" cy="265" r="3"/><circle cx="154" cy="265" r="3"/><circle cx="165" cy="265" r="3"/></g>
+                <!-- 3 Matrix3D -->
+                <g class="msg them" data-msg>
+                  <rect class="b-them" x="128" y="252" width="134" height="42" rx="12"/>
+                  <text class="t-them" x="138" y="270">¡Claro! Te paso</text>
+                  <text class="t-them" x="138" y="285">la cotización</text>
+                </g>
+                <!-- 4 Matrix3D: cotización -->
+                <g class="msg them" data-msg>
+                  <rect class="b-them" x="128" y="300" width="140" height="94" rx="12"/>
+                  <rect class="b-prev" x="136" y="308" width="124" height="22" rx="6"/>
+                  <text class="t-them t-b" x="144" y="323">Cotización</text>
+                  <text class="t-them" x="138" y="346">Llavero NFC morado</text>
+                  <text class="t-small" x="138" y="362">Entrega: 2 a 5 días hábiles</text>
+                  <text class="t-small" x="138" y="378">Envío a todo México</text>
+                </g>
+                <!-- 5 cliente -->
+                <g class="msg me" data-msg>
+                  <rect class="b-me" x="208" y="402" width="84" height="28" rx="12"/>
+                  <text class="t-me" x="250" y="420" text-anchor="middle">¡Va, lo quiero!</text>
+                </g>
+                <!-- escribiendo -->
+                <g class="typing" data-typing="1" opacity="0"><rect class="b-them" x="128" y="438" width="52" height="26" rx="12"/><circle cx="143" cy="451" r="3"/><circle cx="154" cy="451" r="3"/><circle cx="165" cy="451" r="3"/></g>
+                <!-- 6 Matrix3D: progreso de impresión -->
+                <g class="msg them" data-msg>
+                  <rect class="b-them" x="128" y="438" width="152" height="48" rx="12"/>
+                  <text class="t-them t-b" x="138" y="456">Imprimiendo tu pieza</text>
+                  <rect class="bar-bg" x="138" y="466" width="104" height="7" rx="3.5"/>
+                  <rect class="bar" data-chat-bar x="138" y="466" width="104" height="7" rx="3.5"/>
+                  <text class="t-small" x="248" y="473" data-chat-pct>0%</text>
+                </g>
+                <!-- 7 Matrix3D: envío -->
+                <g class="msg them" data-msg>
+                  <rect class="b-them" x="128" y="494" width="152" height="56" rx="12"/>
+                  <text class="t-them t-b" x="138" y="513">Tu pedido va en camino</text>
+                  <text class="t-mono" x="138" y="530">Guía MX 4821 0093</text>
+                  <g class="mini-box"><path d="M246 524l12-6 12 6v14l-12 6-12-6z"/><path d="M246 524l12 6 12-6M258 530v14"/></g>
+                </g>
+              </g>
+            </g>
+            <!-- encabezado del chat -->
+            <path class="chat__head" d="M120 54a22 22 0 0 1 22-22h136a22 22 0 0 1 22 22v28H120z"/>
+            <circle class="chat__avatar" cx="146" cy="57" r="14"/>
+            <image href="assets/img/logo-mark-160.webp" x="136" y="45" width="20" height="24"/>
+            <text class="chat__name" x="168" y="54">Matrix3D</text>
+            <text class="chat__status" x="168" y="69">en línea</text>
+          </g>
+        </svg>
+      </div>
+      <div class="story__copy">
+        <p class="kicker">Cómo pedir</p>
+        <h2 id="proceso-titulo">Así se hace un pedido</h2>
+        <p class="lead">Cuatro pasos, todos por WhatsApp. Te cotizamos antes de empezar a imprimir.</p>
+        <ol class="steps" data-scene-steps>
+          <li class="is-on"><b>1</b><span><strong>Cuéntanos tu idea.</strong> Una foto, un dibujo, medidas o tu archivo STL.</span></li>
+          <li><b>2</b><span><strong>Te cotizamos y diseñamos.</strong> Precio y tiempo de entrega por WhatsApp; al confirmar, modelamos tu pieza.</span></li>
+          <li><b>3</b><span><strong>Lo imprimimos</strong> capa por capa, en el material y color que elegiste.</span></li>
+          <li><b>4</b><span><strong>Te lo entregamos</strong> en Guadalajara o por paquetería a todo México.</span></li>
+        </ol>
+        <a class="btn" data-wa="general" href="https://wa.me/523300000000" target="_blank" rel="noopener">Empezar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ MATERIALES ============================ -->
+<section class="materials" aria-labelledby="materiales-titulo">
+  <div class="wrap">
+    <div class="head head--light">
+      <h2 id="materiales-titulo">Materiales</h2>
+      <p>Elegimos el filamento según cómo se va a usar la pieza. Si no sabes cuál conviene, te lo recomendamos al cotizar.</p>
+    </div>
+    <ul class="spools">
+      <li>
+        <svg class="spool" viewBox="0 0 120 120" aria-hidden="true" data-spool><circle class="rim" cx="60" cy="60" r="54"/><circle class="wind" cx="60" cy="60" r="40" style="--fc:var(--violet)"/><circle class="tex" cx="60" cy="60" r="40"/><circle class="hub" cx="60" cy="60" r="14"/><path class="spoke" d="M60 46v28M46 60h28"/></svg>
+        <h3>PLA</h3><p>El más usado. Buen acabado y muchos colores, ideal para piezas decorativas, figuras y señalización.</p>
+      </li>
+      <li>
+        <svg class="spool" viewBox="0 0 120 120" aria-hidden="true" data-spool><circle class="rim" cx="60" cy="60" r="54"/><circle class="wind" cx="60" cy="60" r="40" style="--fc:#FFFFFF"/><circle class="tex" cx="60" cy="60" r="40"/><circle class="hub" cx="60" cy="60" r="14"/><path class="spoke" d="M60 46v28M46 60h28"/></svg>
+        <h3>PETG</h3><p>Más resistente a golpes, humedad y calor. Para piezas de uso diario y exteriores.</p>
+      </li>
+      <li>
+        <svg class="spool" viewBox="0 0 120 120" aria-hidden="true" data-spool><circle class="rim" cx="60" cy="60" r="54"/><circle class="wind" cx="60" cy="60" r="40" style="--fc:var(--violet-hi)"/><circle class="tex" cx="60" cy="60" r="40"/><circle class="hub" cx="60" cy="60" r="14"/><path class="spoke" d="M60 46v28M46 60h28"/></svg>
+        <h3>TPU</h3><p>Flexible, tipo hule. Para fundas, topes y piezas que deben doblarse.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ ESCENA: envíos a todo México ============================ -->
+<section class="story story--md story--alt" id="envios" aria-labelledby="envios-titulo" data-ship>
+  <div class="story__stage">
+    <div class="story__grid wrap">
+      <div class="story__copy">
+        <p class="kicker">Envíos</p>
+        <h2 id="envios-titulo">Hecho en Guadalajara, entregado en todo México</h2>
+        <p class="lead">Empacamos cada pieza para que llegue completa y te mandamos el número de guía por WhatsApp.</p>
+        <ol class="steps" data-scene-steps>
+          <li class="is-on"><b>1</b><span>Empacamos tu pieza protegida para el viaje.</span></li>
+          <li><b>2</b><span>Sellamos la caja y la etiquetamos con tu dirección.</span></li>
+          <li><b>3</b><span>Entrega en la zona metropolitana de Guadalajara o paquetería a todo el país.</span></li>
+        </ol>
+        <a class="btn" data-wa="general" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar con envío</a>
+      </div>
+      <div class="story__art">
+        <svg class="scene ship" viewBox="0 0 440 440" role="img" aria-labelledby="env-t">
+          <title id="env-t">Una pieza impresa entra en una caja, se sella y viaja de Guadalajara a otras ciudades de México</title>
+          <!-- Ruta -->
+          <g class="route">
+            <path class="route__track" d="M50 384C110 330 150 414 200 376S300 330 340 378S398 402 412 350"/>
+            <path class="route__line" data-route d="M50 384C110 330 150 414 200 376S300 330 340 378S398 402 412 350"/>
+            <g class="pin pin--home" data-pin="0" transform="translate(50 384)"><path d="M0 0c-9-12-14-19-14-25a14 14 0 0 1 28 0c0 6-5 13-14 25z"/><circle cx="0" cy="-25" r="5"/><text x="0" y="22" text-anchor="middle">Guadalajara</text></g>
+            <g class="pin" data-pin="1" transform="translate(200 376)"><path d="M0 0c-9-12-14-19-14-25a14 14 0 0 1 28 0c0 6-5 13-14 25z"/><circle cx="0" cy="-25" r="5"/><text x="0" y="22" text-anchor="middle">CDMX</text></g>
+            <g class="pin" data-pin="2" transform="translate(340 378)"><path d="M0 0c-9-12-14-19-14-25a14 14 0 0 1 28 0c0 6-5 13-14 25z"/><circle cx="0" cy="-25" r="5"/><text x="0" y="22" text-anchor="middle">Monterrey</text></g>
+            <g class="pin" data-pin="3" transform="translate(412 350)"><path d="M0 0c-9-12-14-19-14-25a14 14 0 0 1 28 0c0 6-5 13-14 25z"/><circle cx="0" cy="-25" r="5"/><text x="0" y="22" text-anchor="middle">Mérida</text></g>
+            <g class="van" data-van><path class="mini" d="M-12 -6l12-6 12 6v12l-12 6-12-6z"/><path class="mini-l" d="M-12 -6l12 6 12-6M0 0v12"/></g>
+          </g>
+          <!-- Caja -->
+          <g data-box>
+            <polygon class="box__side" points="300,150 340,126 340,236 300,260"/>
+            <polygon class="box__inside" data-inside points="150,150 190,126 340,126 300,150"/>
+            <polygon class="box__flap box__flap--back" data-flap-back points="190,126 340,126 352,64 202,64" opacity="0"/>
+            <image data-product href="assets/img/llaveros-480.webp" x="172" y="130" width="110" height="102"/>
+            <rect class="box__front" x="150" y="150" width="150" height="110"/>
+            <polygon class="box__flap" data-flap-front points="150,150 300,150 290,96 140,96" opacity="0"/>
+            <polygon class="box__lid" data-lid points="150,150 190,126 340,126 300,150"/>
+            <path class="box__tape" data-tape-line d="M225 150L265 126"/>
+            <g class="box__label" data-label>
+              <rect x="166" y="176" width="118" height="62" rx="4"/>
+              <text class="l1" x="176" y="194">Matrix3D</text>
+              <text class="l2" x="176" y="209">De: Guadalajara</text>
+              <text class="l2" x="176" y="222">Para: tu ciudad</text>
+              <path class="code" d="M258 196v34M262 196v34M267 196v34M270 196v34M274 196v34M278 196v34"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PREGUNTAS ============================ -->
+<section class="section wrap faq" id="preguntas" aria-labelledby="preguntas-titulo">
+  <div class="head">
+    <h2 id="preguntas-titulo">Preguntas frecuentes</h2>
+    <p>Si tu duda no está aquí, escríbenos por WhatsApp.</p>
+  </div>
+  <div class="faq__list">
+    <details><summary><h3>¿Cuánto cuesta imprimir una pieza en 3D en Guadalajara?</h3><i aria-hidden="true"></i></summary><p>Depende del tamaño, el material y las horas de impresión. Cotizamos cada pieza sin costo: mándanos por WhatsApp una foto, las medidas o tu archivo STL y te respondemos con precio y tiempo de entrega.</p></details>
+    <details><summary><h3>¿Cuánto tarda un pedido?</h3><i aria-hidden="true"></i></summary><p>Los productos de catálogo están listos de 2 a 5 días hábiles. Las piezas con diseño 3D a medida dependen de la complejidad del modelo; la fecha exacta se confirma al aprobar la cotización.</p></details>
+    <details><summary><h3>¿Hacen envíos fuera de Guadalajara?</h3><i aria-hidden="true"></i></summary><p>Sí. Entregamos en la zona metropolitana de Guadalajara y enviamos por paquetería a todo México.</p></details>
+    <details><summary><h3>¿Puedo mandar mi propio archivo para imprimir?</h3><i aria-hidden="true"></i></summary><p>Sí. Recibimos archivos STL, 3MF y OBJ. Revisamos que el modelo sea imprimible antes de cotizar y, si necesita ajustes, te los proponemos.</p></details>
+    <details><summary><h3>¿Qué pasa si no tengo un archivo 3D, solo la idea?</h3><i aria-hidden="true"></i></summary><p>Lo diseñamos por ti. Con una foto, un dibujo o medidas creamos el modelo 3D y lo imprimimos.</p></details>
+    <details><summary><h3>¿Con qué materiales imprimen?</h3><i aria-hidden="true"></i></summary><p>PLA para piezas decorativas, PETG para piezas resistentes al uso diario y TPU para piezas flexibles.</p></details>
+    <details><summary><h3>¿Para qué sirven las llaves de permiso en un salón de clases?</h3><i aria-hidden="true"></i></summary><p>Controlan las salidas del salón sin interrumpir la clase: cada llave es un permiso (baño, salida o emergencia). El alumno la toma al salir y la regresa al volver, así el docente sabe quién está fuera y a dónde fue.</p></details>
+    <details><summary><h3>¿Cómo funciona el llavero NFC para mascotas?</h3><i aria-hidden="true"></i></summary><p>El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con el nombre de la mascota y tus datos de contacto. No usa batería ni requiere aplicación; funciona con iPhone XS o más reciente y con Android con NFC.</p></details>
+  </div>
+</section>
+
+<!-- ============================ CIERRE: vista explosionada ============================ -->
+<section class="close" aria-labelledby="cierre-titulo" data-close>
+  <div class="close__grid wrap">
+    <div class="close__copy">
+      <h2 id="cierre-titulo">¿Tienes una idea? La imprimimos.</h2>
+      <p>Mándanos una foto, un dibujo o tu archivo STL por WhatsApp. Te respondemos con precio y fecha de entrega.</p>
+      <a class="btn" data-wa="cierre" href="https://wa.me/523300000000" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+    </div>
+    <div class="close__art">
+      <div class="slices" data-slices data-src="assets/img/logo-matrix3d-900.webp">
+        <img data-slice-base src="assets/img/logo-matrix3d-900.webp" width="820" height="955" alt="Logo de Matrix3D" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ PIE ============================ -->
+<footer class="foot">
+  <div class="foot__grid wrap">
+    <div>
+      <a class="brand" href="#inicio" aria-label="Matrix3D, inicio">
+        <img class="brand__mark" src="assets/img/logo-mark-160.webp" width="33" height="40" alt="">
+        <span class="brand__word">Matrix<b>3D</b></span>
+      </a>
+      <p class="foot__tag">Diseño e impresión 3D en Guadalajara. Modelamos, imprimimos y enviamos a todo México.</p>
+    </div>
+    <address>
+      <h2>Contacto</h2>
+      <p>Guadalajara, Jalisco, México</p>
+      <p><a data-wa="pie" href="https://wa.me/523300000000" target="_blank" rel="noopener">WhatsApp +52 33 0000 0000</a></p>
+      <p><a href="mailto:hola@matrix3d.mx">hola@matrix3d.mx</a></p>
+      <p class="muted">Lunes a viernes de 10:00 a 19:00, sábados de 10:00 a 14:00</p>
+    </address>
+    <div>
+      <h2>Síguenos</h2>
+      <ul class="foot__links">
+        <li><a href="https://www.tiktok.com/@matrix3d" target="_blank" rel="me noopener">TikTok</a></li>
+        <li><a href="https://www.instagram.com/matrix3d" target="_blank" rel="me noopener">Instagram</a></li>
+        <li><a href="https://www.facebook.com/matrix3d" target="_blank" rel="me noopener">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="foot__legal wrap">© <span data-year>2026</span> Matrix3D. Sitio desarrollado por <a href="https://matterasystems.com" target="_blank" rel="noopener">Mattera Systems</a>.</p>
+</footer>
+
+<a class="wa-float" data-wa="flotante" href="https://wa.me/523300000000" target="_blank" rel="noopener" aria-label="Escribir a Matrix3D por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.3z"/></svg>
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script src="js/config.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

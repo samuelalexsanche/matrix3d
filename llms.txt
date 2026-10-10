@@ -1,0 +1,39 @@
+# Matrix3D
+
+> Matrix3D es un taller de diseño 3D e impresión 3D en Guadalajara, Jalisco, México. Modela piezas a medida, imprime archivos STL bajo pedido y vende productos impresos en 3D: llaves de permiso para escuelas, llaveros NFC para mascotas, porta papel en forma de lápiz y figuras por encargo. Envía a todo México.
+
+## Datos del negocio
+- Nombre: Matrix3D
+- Giro: diseño 3D, impresión 3D y venta de productos impresos en 3D
+- Ubicación: Guadalajara, Jalisco, México
+- Zona de servicio: Guadalajara, Zapopan, Tlaquepaque, Tonalá, Tlajomulco de Zúñiga y envíos a todo México
+- Tiempo de entrega: de 2 a 5 días hábiles para productos de catálogo
+- Materiales: PLA, PETG y TPU
+- Pagos: transferencia, depósito y efectivo en entregas locales
+- Horario: lunes a viernes de 10:00 a 19:00, sábados de 10:00 a 14:00
+- WhatsApp: +52 33 0000 0000 (https://wa.me/523300000000)
+- Correo: hola@matrix3d.mx
+- Cómo cotizar: enviar por WhatsApp una foto, dibujo, medidas o archivo STL. La cotización no tiene costo.
+
+## Servicios
+- [Diseño 3D a medida](https://matrix3d.mx/#diseno-3d): modelado de piezas a partir de una idea, foto, dibujo o medidas, listo para imprimir.
+- [Impresión 3D bajo pedido](https://matrix3d.mx/#impresion-3d): impresión de archivos STL, 3MF u OBJ; piezas únicas, refacciones, figuras por encargo y pedidos por volumen.
+
+## Productos
+- [Llaves de permiso para salón de clases](https://matrix3d.mx/#llaves-de-permiso): tablero con llaves impresas en 3D para baño, salida y emergencia. El alumno toma la llave al salir y la regresa al volver; el docente sabe quién está fuera y a dónde fue. Precio a cotizar; pedidos por grupo o por plantel.
+- [Llaves de baño niño y niña](https://matrix3d.mx/#llaves-bano): juego de dos llaves con tablero “Baños” para preescolar y primaria. Precio a cotizar.
+- [Porta papel higiénico en forma de lápiz](https://matrix3d.mx/#porta-papel-lapiz): porta rollo con forma de lápiz gigante y ranura frontal. Precio a cotizar.
+- [Llavero NFC para mascotas y redes](https://matrix3d.mx/#llavero-nfc): llavero con chip NFC; al acercar un celular abre el perfil de la mascota con los datos de contacto del dueño, o las redes sociales de quien lo usa. Sin batería ni app; funciona con iPhone XS o más reciente y Android con NFC. Precio a cotizar.
+- [Figura coleccionable por encargo](https://matrix3d.mx/#figura-por-encargo): figuras impresas en 3D a pedido, en dos colores y con textura detallada. Precio a cotizar.
+
+## Cómo pedir
+1. Enviar la idea por WhatsApp (foto, dibujo, medidas o archivo STL).
+2. Matrix3D envía la cotización (precio y tiempo de entrega); al confirmar, modela la pieza en 3D.
+3. Se imprime capa por capa en el material y color elegidos.
+4. Entrega en la zona metropolitana de Guadalajara o envío por paquetería a todo México.
+
+## Preguntas frecuentes
+- ¿Cuánto cuesta imprimir en 3D en Guadalajara? Depende del tamaño, el material y las horas de impresión; la cotización es gratis por WhatsApp.
+- ¿Hacen envíos? Sí, a todo México por paquetería.
+- ¿Puedo mandar mi propio archivo? Sí: STL, 3MF u OBJ.
+- ¿Y si solo tengo la idea? Matrix3D la diseña en 3D y la imprime.
