@@ -108,10 +108,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .menu-movil .btn { margin-top: 18px; width: 100%; }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; height: calc(100svh - 68px); background: var(--paper); }
-html.js .hero { height: 165svh; }
-@media (min-width: 900px) { html.js .hero { height: 190svh; } }
-.hero__stage { position: sticky; top: 68px; height: calc(100svh - 68px); display: flex; align-items: center; overflow: hidden; background: var(--paper); }
+/* Cada altura en svh lleva antes la misma en vh: si el navegador no entiende
+   svh (Safari anterior a 15.4) la sección conserva su alto y la escena sigue
+   teniendo distancia de scroll; si lo entiende, gana la línea en svh. */
+.hero { position: relative; height: calc(100vh - 68px); height: calc(100svh - 68px); background: var(--paper); }
+html.js .hero { height: 165vh; height: 165svh; }
+@media (min-width: 900px) { html.js .hero { height: 190vh; height: 190svh; } }
+.hero__stage { position: sticky; top: 68px; height: calc(100vh - 68px); height: calc(100svh - 68px); display: flex; align-items: center; overflow: hidden; background: var(--paper); }
 .hero__grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; gap: 10px; align-items: center; }
 @media (min-width: 900px) { .hero__grid { grid-template-columns: 5fr 6fr; gap: 40px; } }
 .hero__copy { order: 2; }
@@ -125,8 +128,8 @@ html.js .hero { height: 165svh; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.2rem; }
 @media (min-width: 900px) { .hero__ctas { margin-top: 2rem; } }
 @media (max-width: 899px) { .hero .kicker { display: none; } .hero__ctas .btn { min-height: 46px; padding: 0 1.1em; } }
-.printer { width: min(100%, 34svh); aspect-ratio: 400 / 470; position: relative; display: grid; place-items: center; }
-@media (min-width: 900px) { .printer { width: min(100%, 60svh); } }
+.printer { width: min(100%, 34vh); width: min(100%, 34svh); aspect-ratio: 400 / 470; position: relative; display: grid; place-items: center; }
+@media (min-width: 900px) { .printer { width: min(100%, 60vh); width: min(100%, 60svh); } }
 .printer svg { width: 100%; height: 100%; overflow: visible; }
 .printer__fallback { width: 70%; height: auto; }
 .hero__hint { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 2; display: none; align-items: center; gap: 10px; font-size: var(--step--1); font-weight: 600; color: var(--ink-2); }
@@ -137,7 +140,7 @@ html.js .hero { height: 165svh; }
 
 /* Consola G-code */
 .console { width: min(100%, 360px); background: var(--ink); color: #fff; border-radius: 12px; padding: 10px 14px; font-family: var(--f-mono); font-size: .72rem; line-height: 1.45; box-shadow: 5px 5px 0 var(--violet); }
-@media (min-width: 900px) { .console { position: absolute; right: 0; bottom: 2svh; width: 290px; } .hero__machine { position: relative; } }
+@media (min-width: 900px) { .console { position: absolute; right: 0; bottom: 2vh; bottom: 2svh; width: 290px; } .hero__machine { position: relative; } }
 .console__head, .console__foot { display: flex; justify-content: space-between; gap: 10px; }
 .console__pct { font-weight: 600; color: var(--violet-hi); font-variant-numeric: tabular-nums; }
 .console__bar { height: 4px; margin: 7px 0; background: #2a2435; border-radius: 2px; overflow: hidden; }
@@ -190,7 +193,7 @@ html.js .hero { height: 165svh; }
 .works__viewport::-webkit-scrollbar { display: none; }
 .works__track { display: flex; gap: 18px; width: max-content; padding-inline: var(--gutter); }
 .piece { scroll-snap-align: center; width: min(78vw, 340px); display: grid; gap: 16px; }
-.piece__stage { position: relative; height: clamp(300px, 46svh, 420px); display: grid; place-items: end center; padding-bottom: 54px; }
+.piece__stage { position: relative; height: clamp(300px, 46vh, 420px); height: clamp(300px, 46svh, 420px); display: grid; place-items: end center; padding-bottom: 54px; }
 .piece__stage img { position: relative; z-index: 2; width: 82%; height: auto; max-height: 92%; object-fit: contain; filter: drop-shadow(10px 12px 0 rgb(14 11 20 / .12)); will-change: transform; }
 /* Pedestal isométrico (hexágono de tres caras = el mismo cubo del logo) */
 .plinth { position: absolute; left: 50%; bottom: 0; width: 78%; aspect-ratio: 2 / 1; transform: translateX(-50%); z-index: 1; }
@@ -215,23 +218,29 @@ html.js .hero { height: 165svh; }
 
 /* ---------- Historias (escuelas / NFC): sección alta + escena fija ---------- */
 .story { position: relative; }
-html.js .story { height: 260svh; }
-html.js .story--md { height: 220svh; }
-.story__stage { min-height: 100svh; display: flex; align-items: center; padding-block: 80px; }
-html.js .story__stage { position: sticky; top: 0; height: 100svh; padding-block: 76px 20px; overflow: hidden; }
+/* Alto de la sección = distancia de scroll de la escena. Se acortó (10 oct 2026,
+   a pedido de Samuel): la escena termina con bastante menos scroll y se siente
+   menos tosca. El alto - 100svh de la escena fija es el recorrido real. */
+html.js .story { height: 190vh; height: 190svh; }
+html.js .story--md { height: 170vh; height: 170svh; }
+.story__stage { min-height: 100vh; min-height: 100svh; display: flex; align-items: center; padding-block: 80px; }
+html.js .story__stage { position: sticky; top: 0; height: 100vh; height: 100svh; padding-block: 76px 20px; overflow: hidden; }
 .story--alt { background: var(--paper-2); border-block: 2px solid var(--ink); }
 .story__grid { display: grid; gap: 22px; align-items: center; }
 @media (min-width: 900px) { .story__grid { grid-template-columns: 1fr 1fr; gap: 60px; } }
 .story__copy h2 { font-size: var(--step-3); }
 .story .lead { margin-top: 14px; color: var(--ink-2); font-size: var(--step-1); line-height: 1.5; max-width: 34rem; }
 .story__art { display: grid; place-items: center; }
-.story__art svg { width: min(100%, 520px); height: auto; max-height: 52svh; overflow: visible; }
-@media (min-width: 900px) { .story__art svg { max-height: 78svh; } }
+.story__art svg { width: min(100%, 520px); height: auto; max-height: 52vh; max-height: 52svh; overflow: visible; }
+@media (min-width: 900px) { .story__art svg { max-height: 78vh; max-height: 78svh; } }
 @media (max-width: 899px) {
   html.js .story .story__art { order: -1; }
   html.js .story .lead { display: none; }
   .story__copy h2 { font-size: clamp(1.45rem, 6vw, 2rem); }
-  html.js .story .story__art svg { max-height: 40svh; }
+  html.js .story .story__art svg { max-height: 40vh; max-height: 40svh; }
+  /* En táctil cada swipe avanza menos píxeles: escenas aún más cortas */
+  html.js .story { height: 175vh; height: 175svh; }
+  html.js .story--md { height: 160vh; height: 160svh; }
 }
 .steps { display: grid; gap: 10px; margin: 22px 0 26px; }
 .steps li { display: grid; grid-template-columns: 38px 1fr; gap: 12px; align-items: center; color: var(--ink-2); transition: color .3s; }

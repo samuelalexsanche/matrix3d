@@ -330,8 +330,18 @@
     tl.pause(0);
     escenas.push({ sec: sec, tl: tl, cb: alAvanzar, p: -1 });
   }
+  var cuadroMov = -1, tMov = 0;
   function moverEscenas() {
-    var vh = window.innerHeight, k = tactil ? 0.3 : 0.16;
+    // La mueven el ticker de GSAP y el listener de scroll. Se descarta la
+    // pasada repetida del mismo cuadro (el suavizado es por pasada), pero si
+    // el navegador deja de pintar cuadros mientras se arrastra el dedo
+    // (iOS) el scroll sigue moviendo la escena.
+    var f = window.gsap ? gsap.ticker.frame : -1, t = Date.now();
+    if (f === cuadroMov && t - tMov < 8) return;
+    cuadroMov = f; tMov = t;
+    // k = qué tanto se acerca la escena a su meta en cada pasada: más alto,
+    // responde más rápido al scroll y se siente menos arrastrada.
+    var vh = window.innerHeight, k = tactil ? 0.42 : 0.24;
     for (var i = 0; i < escenas.length; i++) {
       var e = escenas[i], r = e.sec.getBoundingClientRect();
       var recorrido = Math.max(1, r.height - vh);
@@ -522,6 +532,9 @@
       ScrollTrigger.config({ ignoreMobileResize: true });
     }
     if (window.gsap) gsap.ticker.add(moverEscenas);
+    // Red de seguridad: si el navegador pausa requestAnimationFrame durante el
+    // scroll, el evento de scroll mantiene las escenas avanzando.
+    window.addEventListener("scroll", moverEscenas, { passive: true });
     scrollSuave(); hero(); cinta(); losas(); disenio(); trabajos(); nfc(); chat(); envios(); bobinas(); cierre();
     if (window.ScrollTrigger) {
       window.addEventListener("load", function () { ScrollTrigger.refresh(); });
