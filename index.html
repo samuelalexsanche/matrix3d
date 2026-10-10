@@ -483,7 +483,10 @@
             <rect class="phone__body" x="224" y="32" width="160" height="320" rx="26"/>
             <rect class="phone__screen" x="234" y="44" width="140" height="296" rx="18"/>
             <rect class="phone__notch" x="284" y="50" width="40" height="8" rx="4"/>
-            <g class="phone__card" data-phone-card opacity="0">
+            <!-- Estado final en el HTML: sin JS o con movimiento reducido el
+                 perfil se ve dentro del celular. El JS lo oculta al iniciar
+                 el timeline (fromTo) y lo hace aparecer con el scroll. -->
+            <g class="phone__card" data-phone-card>
               <rect class="card" x="246" y="96" width="116" height="196" rx="12"/>
               <circle class="avatar" cx="304" cy="136" r="24"/>
               <path class="paw" d="M296 136a5 6 0 1 1 0 .1zm16 0a5 6 0 1 1 0 .1zM290 128a3.6 4.4 0 1 1 0 .1zm28 0a3.6 4.4 0 1 1 0 .1zM304 140c8 0 11 8 9 10-3 3-6 1-9 1s-6 2-9-1c-2-2 1-10 9-10z"/>

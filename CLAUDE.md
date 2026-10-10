@@ -52,7 +52,7 @@ build-preview.py  genera preview/ con CSS/JS en línea
 - La animación del hero debe ser corta (sección de 165svh en móvil y 190svh en escritorio). No la alargues.
 - Se quitó la escena animada del tablero de permisos; la sección Escuelas usa la foto real.
 - El scroll debe sentirse fluido: no agregues pins nuevos ni escenas largas sin probar en móvil.
-- La escena NFC se queda como está (260svh): al cliente le gustó. Las escenas nuevas siguen el mismo lenguaje: ilustración SVG con contorno tinta, sombra sólida desplazada, tonos de marca, desplazamiento leve del arte (sin transformaciones 3D sobre el SVG), pasos de texto que se activan con el avance y un detalle en bucle (vaivén, puntos de "escribiendo").
+- La escena NFC se queda como está: al cliente le gustó. (10 oct 2026: a pedido de Samuel se acortó su distancia de scroll a 190svh, 175svh en táctil, como todas las escenas; la coreografía y el arte no se tocaron.) Las escenas nuevas siguen el mismo lenguaje: ilustración SVG con contorno tinta, sombra sólida desplazada, tonos de marca, desplazamiento leve del arte (sin transformaciones 3D sobre el SVG), pasos de texto que se activan con el avance y un detalle en bucle (vaivén, puntos de "escribiendo").
 - Matrix3D NO ofrece vista previa del producto: no la menciones en textos, escenas ni schema.
 - Escenas ilustradas: el HTML trae el estado final (se ve completo sin JS) y el JS pone el estado inicial dentro del timeline.
 - Sin animación en las imágenes de productos (galería y escuelas): las fotos de las llaves y demás piezas quedan fijas sobre su pedestal.

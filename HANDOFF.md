@@ -41,7 +41,16 @@ SEO local + GEO (que el negocio aparezca en ChatGPT, Perplexity, Gemini y AI Ove
 - **Datos estructurados (JSON-LD):** LocalBusiness + WebSite + WebPage + 2 Service + OfferCatalog (5 Product) + HowTo + FAQPage.
 - **Archivos para buscadores e IA:** `llms.txt`, `robots.txt` (permite crawlers de IA), `sitemap.xml` con imágenes, `site.webmanifest` y `404.html`.
 - **Ya verificado** en Chromium a 1600 px y 390 px, con scroll de rueda y táctil: las 4 escenas ilustradas avanzan, no hay errores de consola ni scroll horizontal, y la página se ve completa sin JS y con "reducir movimiento". También se revisó en el Chrome real de Samuel: NFC y envíos funcionan.
-- **Pendiente de confirmar:** Samuel reportó que las escenas **NFC** y **envíos** se le quedaban quietas. En su Chrome sí funcionan, así que puede ser caché o el navegador o panel donde las ve. Tras el deploy, **revísalo en la URL publicada en Chrome, Safari y en un iPhone** (sección 6).
+
+### Publicado y verificado (10 oct 2026)
+- Repo: `samuelalexsanche/matrix3d`. URL de preview: **https://samuelalexsanche.github.io/matrix3d/** (con `noindex`, como marca la sección 5).
+- Verificado en la URL publicada con Chromium (1440 y 390 px) y con WebKit real, escritorio y perfil iPhone 14 Pro: las 4 escenas avanzan con el scroll, sin errores de consola y sin scroll horizontal. **No se probó en la app Safari ni en un iPhone físico** (esta Mac no tiene Xcode ni simulador): queda para Samuel.
+- Cambios de ese día:
+  - Escenas más cortas a pedido de Samuel: `.story` 260 → 190svh y `.story--md` 220 → 170svh (175/160svh en táctil), y el suavizado responde más rápido (`k` 0.16 → 0.24 en escritorio, 0.3 → 0.42 en táctil). No se tocó la coreografía de ninguna escena.
+  - Cada alto en `svh` lleva su fallback en `vh`. Sin él, un navegador sin `svh` (Safari anterior a 15.4) deja las secciones a su alto natural, el recorrido se vuelve 0 y **las escenas se ven congeladas en su estado final**: es la causa más probable de lo que reportó Samuel.
+  - Las escenas también avanzan con el evento `scroll`, por si el navegador pausa `requestAnimationFrame`.
+  - La tarjeta del perfil NFC ya no nace con `opacity="0"` en el HTML: sin JS o con movimiento reducido el celular se veía vacío. Con JS la animación es idéntica.
+- **Lighthouse móvil en la URL de preview:** Accesibilidad 100, Buenas prácticas 100, SEO 66, Rendimiento 81. El SEO 66 es solo el `noindex` del preview (sube a 100 con dominio propio y `PUBLIC_NOINDEX=false`). El 81 de rendimiento es la hoja de Google Fonts, que bloquea el render (~0.9 s en móvil simulado) más 122 KB de fuentes: se arregla cargándola sin bloquear o alojando las fuentes en el repo. Nada de esto viene de las escenas.
 
 ## 4. Decisiones del cliente (no revertir)
 - **Logo:** siempre el original (`assets/img/logo-*`). Nunca redibujado ni vectorizado. Las animaciones usan la imagen original con recortes, clip o máscaras.
@@ -54,6 +63,8 @@ SEO local + GEO (que el negocio aparezca en ChatGPT, Perplexity, Gemini y AI Ove
 
 ## 5. Despliegue en GitHub Pages
 El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras sea preview, marca `noindex` y bloquea robots para no competir con el dominio final.
+
+> Ya hecho el 10 oct 2026 en la cuenta `samuelalexsanche`. Los pasos quedan por si hay que repetirlo en otra cuenta.
 
 1. Revisa la sesión: `gh auth status`. Si no hay sesión, `gh auth login`.
 2. **Pregunta a Samuel una sola vez en qué cuenta u organización publicar.**
