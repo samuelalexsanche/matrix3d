@@ -127,7 +127,17 @@ html.js .hero { height: 165vh; height: 165svh; }
 @media (min-width: 900px) { .hero__lead { font-size: var(--step-1); line-height: 1.5; } }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.2rem; }
 @media (min-width: 900px) { .hero__ctas { margin-top: 2rem; } }
-@media (max-width: 899px) { .hero .kicker { display: none; } .hero__ctas .btn { min-height: 46px; padding: 0 1.1em; } }
+@media (max-width: 899px) {
+  .hero .kicker { display: none; }
+  .hero__ctas .btn { min-height: 46px; padding: 0 1.1em; }
+  /* En móvil la escena fija no puede pasarse de alto: el texto y los botones
+     toman lo que necesitan y la impresora se queda con lo que sobra. Con la
+     impresora en un alto fijo, en pantallas cortas los botones se cortaban. */
+  html.js .hero__stage { align-items: stretch; }
+  html.js .hero__grid { height: 100%; grid-template-rows: minmax(0, 1fr) auto; align-items: stretch; padding-block: 10px; }
+  html.js .hero__machine { min-height: 0; grid-template-rows: minmax(0, 1fr) auto; align-content: center; }
+  html.js .printer { width: auto; max-width: 100%; height: 100%; }
+}
 .printer { width: min(100%, 34vh); width: min(100%, 34svh); aspect-ratio: 400 / 470; position: relative; display: grid; place-items: center; }
 @media (min-width: 900px) { .printer { width: min(100%, 60vh); width: min(100%, 60svh); } }
 .printer svg { width: 100%; height: 100%; overflow: visible; }
@@ -237,7 +247,13 @@ html.js .story__stage { position: sticky; top: 0; height: 100vh; height: 100svh;
   html.js .story .story__art { order: -1; }
   html.js .story .lead { display: none; }
   .story__copy h2 { font-size: clamp(1.45rem, 6vw, 2rem); }
-  html.js .story .story__art svg { max-height: 40vh; max-height: 40svh; }
+  /* Igual que el hero: la ilustración toma el espacio que sobra después del
+     texto, los pasos y el botón. Con 40svh fijos, en pantallas cortas el
+     botón de cada escena quedaba cortado por el overflow del contenedor. */
+  html.js .story__stage { align-items: stretch; padding-block: 72px 14px; }
+  html.js .story .story__grid { height: 100%; grid-template-rows: minmax(64px, 1fr) auto; align-items: stretch; gap: 14px; }
+  html.js .story .story__art svg { max-height: 100%; }
+  html.js .story .steps { gap: 8px; margin: 14px 0 18px; }
   /* En táctil cada swipe avanza menos píxeles: escenas aún más cortas */
   html.js .story { height: 175vh; height: 175svh; }
   html.js .story--md { height: 160vh; height: 160svh; }
