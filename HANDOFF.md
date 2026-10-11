@@ -82,6 +82,12 @@ El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras
 4. La URL queda en `https://<cuenta>.github.io/matrix3d/`. Las rutas del index son relativas, así que funciona en subcarpeta.
 5. Entrega la URL a Samuel. El repo es público; si prefiere privado, Pages requiere plan de pago.
 
+### El dominio, y lo que vive en él (11 oct 2026)
+- `matrix3d.com.mx` (raíz y `www`) → este sitio, en GitHub Pages. En Cloudflare son dos CNAME a `samuelalexsanche.github.io` en **DNS only (nube gris)**: con la nube naranja GitHub no puede emitir el certificado.
+- `tag.matrix3d.com.mx` → **Matrix3D TAG**, el sistema de perfiles NFC, que corre en un Raspberry Pi por un túnel de Cloudflare (`matrix3d-rpi`). Antes vivía en la raíz; se movió con autorización del cliente para liberarla.
+- `calculadora.matrix3d.com.mx` → otra app interna del mismo túnel, detrás de Cloudflare Access. No se toca.
+- **Pendiente:** los llaveros NFC ya entregados pueden traer grabada la URL vieja de la raíz. Para rescatarlos hace falta una Redirect Rule en Cloudflare hacia `tag.`, y para eso la raíz tendría que pasar a nube naranja con SSL en **Full (strict)**. Falta que el cliente diga qué URL traen los chips.
+
 ### Cuando haya dominio propio
 - Pon un `CNAME` en la raíz con el dominio y apunta el DNS a GitHub Pages.
 - Corre `gh variable set PUBLIC_NOINDEX --body false -R <cuenta>/matrix3d` y vuelve a desplegar.
@@ -103,7 +109,7 @@ El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras
 |---|---|---|
 | ~~WhatsApp~~ | **Ya puesto:** `523115920483` / `+52 311 592 0483` | — |
 | ~~Correo~~ | **Ya puesto:** `matrix3d.contacto@gmail.com` | — |
-| ~~Dominio~~ | **Ya puesto:** `https://matrix3d.com.mx` (Cloudflare). Falta crear el archivo `CNAME` y poner `PUBLIC_NOINDEX=false` cuando el DNS apunte a GitHub | — |
+| ~~Dominio~~ | **Ya publicado** en `https://matrix3d.com.mx` (11 oct 2026): DNS en Cloudflare, archivo `CNAME`, `PUBLIC_NOINDEX=false` | — |
 | Coordenadas | `20.6597, -103.3496` (centro de GDL) | `index.html` |
 | Horario | L–V 10–19, S 10–14 | `index.html`, `llms.txt` |
 | Tiempo de entrega | 2 a 5 días hábiles | FAQ y JSON-LD en `index.html`, chat de la escena de proceso, `llms.txt` |
@@ -115,7 +121,7 @@ El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras
 ## 8. Checklist antes de lanzar como sitio oficial
 - [ ] Placeholders reemplazados.
 - [ ] NAP idéntico en el sitio, Google Business, Facebook e Instagram.
-- [ ] Dominio, `CNAME` y `PUBLIC_NOINDEX=false`.
+- [x] Dominio, `CNAME` y `PUBLIC_NOINDEX=false`.
 - [ ] Search Console y Bing con el sitemap enviado.
 - [ ] Lighthouse y Rich Results en verde.
 
