@@ -252,7 +252,11 @@ html.js .story__stage { position: sticky; top: 0; height: 100vh; height: 100svh;
      botón de cada escena quedaba cortado por el overflow del contenedor. */
   html.js .story__stage { align-items: stretch; padding-block: 72px 14px; }
   html.js .story .story__grid { height: 100%; grid-template-rows: minmax(64px, 1fr) auto; align-items: stretch; gap: 14px; }
-  html.js .story .story__art svg { max-height: 100%; }
+  /* El SVG se posiciona absoluto dentro de su hueco: así su alto es el del
+     hueco de verdad y el viewBox se escala solo. Con un tope en svh el dibujo
+     se quedaba a su tamaño y se encimaba con el título de la sección. */
+  html.js .story .story__art { position: relative; }
+  html.js .story .story__art svg { position: absolute; inset: 0; width: 100%; height: 100%; max-height: none; }
   html.js .story .steps { gap: 8px; margin: 14px 0 18px; }
   /* En táctil cada swipe avanza menos píxeles: escenas aún más cortas */
   html.js .story { height: 175vh; height: 175svh; }

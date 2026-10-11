@@ -101,13 +101,13 @@ El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras
 ## 7. Placeholders (buscar y reemplazar en todo el proyecto)
 | Dato | Valor actual | Dónde |
 |---|---|---|
-| WhatsApp | `523300000000` / `+52 33 0000 0000` | `js/config.js`, `index.html` (JSON-LD, pie), `llms.txt` |
-| Correo | `hola@matrix3d.mx` | `index.html`, `llms.txt` |
+| ~~WhatsApp~~ | **Ya puesto:** `523115920483` / `+52 311 592 0483` | — |
+| ~~Correo~~ | **Ya puesto:** `matrix3d.contacto@gmail.com` | — |
 | Dominio | `https://matrix3d.mx` | `index.html` (canonical, OG, JSON-LD), `robots.txt`, `sitemap.xml`, `llms.txt` |
 | Coordenadas | `20.6597, -103.3496` (centro de GDL) | `index.html` |
 | Horario | L–V 10–19, S 10–14 | `index.html`, `llms.txt` |
 | Tiempo de entrega | 2 a 5 días hábiles | FAQ y JSON-LD en `index.html`, chat de la escena de proceso, `llms.txt` |
-| Redes | `@matrix3d` en TikTok, Instagram y Facebook | `index.html` |
+| Redes | Instagram ya es el real (`matrix3d.oficial`). **Faltan TikTok y Facebook**: se quitaron del pie y del `sameAs` para no dejar enlaces rotos | `index.html` |
 | Perfil NFC de ejemplo | `https://example.com/mascota` | `index.html` (sección NFC) |
 | Precios | "a cotizar" | Si el cliente da precios, agrega `offers` a cada Product del JSON-LD |
 | Crédito Mattera | `https://matterasystems.com` | pie de `index.html` |

@@ -5,7 +5,7 @@
    ============================================================ */
 window.MATRIX3D = {
   /* WhatsApp: 52 + LADA + número, sin espacios ni signos */
-  whatsapp: "523300000000", // PLACEHOLDER
+  whatsapp: "523115920483", // WhatsApp real del cliente
 
   /* Mensaje precargado por botón. La clave coincide con data-wa="..." en el HTML */
   mensajes: {
