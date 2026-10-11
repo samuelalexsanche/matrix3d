@@ -103,7 +103,7 @@ El workflow `.github/workflows/deploy.yml` publica la carpeta tal cual. Mientras
 |---|---|---|
 | ~~WhatsApp~~ | **Ya puesto:** `523115920483` / `+52 311 592 0483` | — |
 | ~~Correo~~ | **Ya puesto:** `matrix3d.contacto@gmail.com` | — |
-| Dominio | `https://matrix3d.mx` | `index.html` (canonical, OG, JSON-LD), `robots.txt`, `sitemap.xml`, `llms.txt` |
+| ~~Dominio~~ | **Ya puesto:** `https://matrix3d.com.mx` (Cloudflare). Falta crear el archivo `CNAME` y poner `PUBLIC_NOINDEX=false` cuando el DNS apunte a GitHub | — |
 | Coordenadas | `20.6597, -103.3496` (centro de GDL) | `index.html` |
 | Horario | L–V 10–19, S 10–14 | `index.html`, `llms.txt` |
 | Tiempo de entrega | 2 a 5 días hábiles | FAQ y JSON-LD en `index.html`, chat de la escena de proceso, `llms.txt` |
