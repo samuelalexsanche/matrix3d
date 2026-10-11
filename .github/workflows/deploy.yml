@@ -23,6 +23,9 @@ jobs:
         run: |
           mkdir _site
           cp -r index.html 404.html css js assets llms.txt robots.txt sitemap.xml site.webmanifest _site/
+          # El dominio propio: Pages lo toma del CNAME que venga en el artefacto.
+          # Mientras no exista el archivo, el sitio se sigue sirviendo en github.io.
+          if [ -f CNAME ]; then cp CNAME _site/; fi
           # Preview para el cliente: que Google no indexe github.io (quitar cuando haya dominio propio)
           if [ "${{ vars.PUBLIC_NOINDEX || 'true' }}" = "true" ]; then
             sed -i 's|<meta name="robots" content="index, follow[^"]*">|<meta name="robots" content="noindex, nofollow">|' _site/index.html

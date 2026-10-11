@@ -32,4 +32,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://matrix3d.mx/sitemap.xml
+Sitemap: https://matrix.com.mx/sitemap.xml

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://matrix3d.mx/</loc>
+    <loc>https://matrix.com.mx/</loc>
     <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <image:image><image:loc>https://matrix3d.mx/assets/img/permisos-900.webp</image:loc></image:image>
-    <image:image><image:loc>https://matrix3d.mx/assets/img/banos-900.webp</image:loc></image:image>
-    <image:image><image:loc>https://matrix3d.mx/assets/img/lapiz-900.webp</image:loc></image:image>
-    <image:image><image:loc>https://matrix3d.mx/assets/img/llaveros-900.webp</image:loc></image:image>
-    <image:image><image:loc>https://matrix3d.mx/assets/img/kaiju-900.webp</image:loc></image:image>
+    <image:image><image:loc>https://matrix.com.mx/assets/img/permisos-900.webp</image:loc></image:image>
+    <image:image><image:loc>https://matrix.com.mx/assets/img/banos-900.webp</image:loc></image:image>
+    <image:image><image:loc>https://matrix.com.mx/assets/img/lapiz-900.webp</image:loc></image:image>
+    <image:image><image:loc>https://matrix.com.mx/assets/img/llaveros-900.webp</image:loc></image:image>
+    <image:image><image:loc>https://matrix.com.mx/assets/img/kaiju-900.webp</image:loc></image:image>
   </url>
 </urlset>
