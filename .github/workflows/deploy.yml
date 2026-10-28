@@ -26,6 +26,8 @@ jobs:
           # El dominio propio: Pages lo toma del CNAME que venga en el artefacto.
           # Mientras no exista el archivo, el sitio se sigue sirviendo en github.io.
           if [ -f CNAME ]; then cp CNAME _site/; fi
+          # Llave de IndexNow (avisa a Bing/Yandex cada vez que cambia el sitio)
+          cp a1c2ef037518a886f5c0741424ba3bb0.txt _site/
           # Preview para el cliente: que Google no indexe github.io (quitar cuando haya dominio propio)
           if [ "${{ vars.PUBLIC_NOINDEX || 'true' }}" = "true" ]; then
             sed -i 's|<meta name="robots" content="index, follow[^"]*">|<meta name="robots" content="noindex, nofollow">|' _site/index.html
