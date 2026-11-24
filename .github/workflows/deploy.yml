@@ -1,5 +1,4 @@
 
-# Publica el sitio estático en GitHub Pages en cada push a main.
 name: Deploy to GitHub Pages
 
 on:
@@ -18,12 +17,10 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
 
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # TRABAJO 1: Preparar y subir el sitio
+  build:
+    runs-on: ubuntu-latest
 
     steps:
       - name: Descargar repositorio
@@ -39,7 +36,6 @@ jobs:
 
           mkdir -p _site
 
-          # Archivos y carpetas del sitio
           cp -r index.html 404.html css js assets \
             llms.txt robots.txt sitemap.xml site.webmanifest _site/
 
@@ -48,17 +44,24 @@ jobs:
             cp CNAME _site/
           fi
 
-          # Llave de verificación de IndexNow
+          # Verificación de IndexNow
           cp a1c2ef037518a886f5c0741424ba3bb0.txt _site/
 
-          # No bloquear la indexación del sitio público.
-          # Se conserva el robots.txt original del repositorio.
-
       - name: Subir artefacto de GitHub Pages
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
+  # TRABAJO 2: Publicar cuando termine el primero
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Publicar en GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
