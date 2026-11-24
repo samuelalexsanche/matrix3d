@@ -1,40 +1,64 @@
-# Publica el sitio estático en GitHub Pages en cada push a main (sin build).
+
+# Publica el sitio estático en GitHub Pages en cada push a main.
 name: Deploy to GitHub Pages
+
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   workflow_dispatch:
+
 permissions:
   contents: read
   pages: write
   id-token: write
+
 concurrency:
   group: pages
-  cancel-in-progress: false
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Preparar carpeta pública
+        shell: bash
         run: |
-          mkdir _site
-          cp -r index.html 404.html css js assets llms.txt robots.txt sitemap.xml site.webmanifest _site/
-          # El dominio propio: Pages lo toma del CNAME que venga en el artefacto.
-          # Mientras no exista el archivo, el sitio se sigue sirviendo en github.io.
-          if [ -f CNAME ]; then cp CNAME _site/; fi
-          # Llave de IndexNow (avisa a Bing/Yandex cada vez que cambia el sitio)
-          cp a1c2ef037518a886f5c0741424ba3bb0.txt _site/
-          # Preview para el cliente: que Google no indexe github.io (quitar cuando haya dominio propio)
-          if [ "${{ vars.PUBLIC_NOINDEX || 'true' }}" = "true" ]; then
-            sed -i 's|<meta name="robots" content="index, follow[^"]*">|<meta name="robots" content="noindex, nofollow">|' _site/index.html
-            printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          set -e
+
+          mkdir -p _site
+
+          # Archivos y carpetas del sitio
+          cp -r index.html 404.html css js assets \
+            llms.txt robots.txt sitemap.xml site.webmanifest _site/
+
+          # Dominio personalizado
+          if [ -f CNAME ]; then
+            cp CNAME _site/
           fi
-      - uses: actions/upload-pages-artifact@v3
+
+          # Llave de verificación de IndexNow
+          cp a1c2ef037518a886f5c0741424ba3bb0.txt _site/
+
+          # No bloquear la indexación del sitio público.
+          # Se conserva el robots.txt original del repositorio.
+
+      - name: Subir artefacto de GitHub Pages
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-      - id: deployment
+
+      - name: Publicar en GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
