@@ -70,6 +70,7 @@
 <link rel="stylesheet" href="css/styles.css">
 
 <!-- ===================== DATOS ESTRUCTURADOS (SEO + GEO) ===================== -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,28 +81,81 @@
       "name": "Matrix3D",
       "description": "Taller de diseño 3D e impresión 3D en Guadalajara, Jalisco. Modelado 3D a medida, impresión 3D bajo pedido, llaves de permiso para escuelas, llaveros NFC para mascotas y productos virales. Envíos a todo México.",
       "url": "https://matrix3d.com.mx/",
-      "logo": { "@type": "ImageObject", "url": "https://matrix3d.com.mx/assets/img/logo-matrix3d.png", "width": 820, "height": 955 },
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://matrix3d.com.mx/assets/img/logo-matrix3d.png",
+        "width": 820,
+        "height": 955
+      },
       "image": "https://matrix3d.com.mx/assets/img/og-matrix3d.jpg",
       "telephone": "+523115920483",
       "email": "matrix3d.contacto@gmail.com",
       "priceRange": "$$",
       "currenciesAccepted": "MXN",
       "paymentAccepted": "Transferencia, depósito, efectivo en entregas locales",
-      "address": { "@type": "PostalAddress", "addressLocality": "Guadalajara", "addressRegion": "Jalisco", "addressCountry": "MX" },
-      "geo": { "@type": "GeoCoordinates", "latitude": 20.6597, "longitude": -103.3496 },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Guadalajara",
+        "addressRegion": "Jalisco",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 20.6597,
+        "longitude": -103.3496
+      },
       "areaServed": [
-        { "@type": "City", "name": "Guadalajara" }, { "@type": "City", "name": "Zapopan" },
-        { "@type": "City", "name": "Tlaquepaque" }, { "@type": "City", "name": "Tonalá" },
-        { "@type": "City", "name": "Tlajomulco de Zúñiga" }, { "@type": "Country", "name": "México" }
+        { "@type": "City", "name": "Guadalajara" },
+        { "@type": "City", "name": "Zapopan" },
+        { "@type": "City", "name": "Tlaquepaque" },
+        { "@type": "City", "name": "Tonalá" },
+        { "@type": "City", "name": "Tlajomulco de Zúñiga" },
+        { "@type": "Country", "name": "México" }
       ],
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["https://schema.org/Monday","https://schema.org/Tuesday","https://schema.org/Wednesday","https://schema.org/Thursday","https://schema.org/Friday"], "opens": "10:00", "closes": "19:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "https://schema.org/Saturday", "opens": "10:00", "closes": "14:00" }
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "https://schema.org/Saturday",
+          "opens": "10:00",
+          "closes": "14:00"
+        }
       ],
-      "knowsAbout": ["Impresión 3D", "Diseño 3D", "Modelado 3D", "Fabricación aditiva", "Filamento PLA", "Filamento PETG", "Filamento TPU", "Etiquetas NFC", "Material para escuelas"],
-      "contactPoint": { "@type": "ContactPoint", "telephone": "+523115920483", "contactType": "sales", "availableLanguage": ["es"], "areaServed": "MX" },
-      "sameAs": ["https://www.instagram.com/matrix3d.oficial"],
-      "hasOfferCatalog": { "@id": "https://matrix3d.com.mx/#catalogo" }
+      "knowsAbout": [
+        "Impresión 3D",
+        "Diseño 3D",
+        "Modelado 3D",
+        "Fabricación aditiva",
+        "Filamento PLA",
+        "Filamento PETG",
+        "Filamento TPU",
+        "Etiquetas NFC",
+        "Material para escuelas"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+523115920483",
+        "contactType": "sales",
+        "availableLanguage": ["es"],
+        "areaServed": "MX"
+      },
+      "sameAs": [
+        "https://www.instagram.com/matrix3d.oficial"
+      ],
+      "hasOfferCatalog": {
+        "@id": "https://matrix3d.com.mx/#catalogo"
+      }
     },
     {
       "@type": "WebSite",
@@ -109,15 +163,21 @@
       "url": "https://matrix3d.com.mx/",
       "name": "Matrix3D",
       "inLanguage": "es-MX",
-      "publisher": { "@id": "https://matrix3d.com.mx/#negocio" }
+      "publisher": {
+        "@id": "https://matrix3d.com.mx/#negocio"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://matrix3d.com.mx/#pagina",
       "url": "https://matrix3d.com.mx/",
       "name": "Impresión y diseño 3D en Guadalajara | Matrix3D",
-      "isPartOf": { "@id": "https://matrix3d.com.mx/#sitio" },
-      "about": { "@id": "https://matrix3d.com.mx/#negocio" },
+      "isPartOf": {
+        "@id": "https://matrix3d.com.mx/#sitio"
+      },
+      "about": {
+        "@id": "https://matrix3d.com.mx/#negocio"
+      },
       "inLanguage": "es-MX"
     },
     {
@@ -126,8 +186,13 @@
       "name": "Diseño 3D a medida",
       "serviceType": "Modelado 3D",
       "description": "Modelado 3D a partir de una idea, foto, dibujo o medidas, listo para imprimir.",
-      "provider": { "@id": "https://matrix3d.com.mx/#negocio" },
-      "areaServed": { "@type": "Country", "name": "México" }
+      "provider": {
+        "@id": "https://matrix3d.com.mx/#negocio"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      }
     },
     {
       "@type": "Service",
@@ -135,42 +200,206 @@
       "name": "Impresión 3D bajo pedido",
       "serviceType": "Impresión 3D",
       "description": "Impresión 3D de archivos STL, 3MF u OBJ en PLA, PETG y TPU: piezas únicas, refacciones, figuras por encargo y pedidos por volumen.",
-      "provider": { "@id": "https://matrix3d.com.mx/#negocio" },
-      "areaServed": { "@type": "Country", "name": "México" }
+      "provider": {
+        "@id": "https://matrix3d.com.mx/#negocio"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "México"
+      }
     },
     {
       "@type": "OfferCatalog",
       "@id": "https://matrix3d.com.mx/#catalogo",
       "name": "Productos impresos en 3D",
       "itemListElement": [
-        { "@type": "Product", "@id": "https://matrix3d.com.mx/#llaves-de-permiso", "name": "Llaves de permiso para salón de clases", "description": "Tablero con llaves impresas en 3D para controlar los permisos del salón: baño, salida y emergencia.", "image": "https://matrix3d.com.mx/assets/img/permisos-900.webp", "category": "Escuelas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
-        { "@type": "Product", "@id": "https://matrix3d.com.mx/#llaves-bano", "name": "Llaves de baño niño y niña", "description": "Juego de dos llaves impresas en 3D con tablero “Baños” para preescolar y primaria.", "image": "https://matrix3d.com.mx/assets/img/banos-900.webp", "category": "Escuelas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
-        { "@type": "Product", "@id": "https://matrix3d.com.mx/#porta-papel-lapiz", "name": "Porta papel higiénico en forma de lápiz", "description": "Porta rollo impreso en 3D con forma de lápiz gigante y ranura frontal.", "image": "https://matrix3d.com.mx/assets/img/lapiz-900.webp", "category": "Hogar", "brand": { "@type": "Brand", "name": "Matrix3D" } },
-        { "@type": "Product", "@id": "https://matrix3d.com.mx/#llavero-nfc", "name": "Llavero NFC para mascotas y redes sociales", "description": "Llavero impreso en 3D con chip NFC que abre el perfil de contacto de la mascota o tus redes al acercar un celular.", "image": "https://matrix3d.com.mx/assets/img/llaveros-900.webp", "category": "Mascotas", "brand": { "@type": "Brand", "name": "Matrix3D" } },
-        { "@type": "Product", "@id": "https://matrix3d.com.mx/#figura-por-encargo", "name": "Figura coleccionable por encargo", "description": "Figuras impresas en 3D a pedido, en dos colores y con textura detallada.", "image": "https://matrix3d.com.mx/assets/img/kaiju-900.webp", "category": "Por encargo", "brand": { "@type": "Brand", "name": "Matrix3D" } }
+        {
+          "@type": "Product",
+          "@id": "https://matrix3d.com.mx/#llaves-de-permiso",
+          "name": "Llaves de permiso para salón de clases",
+          "description": "Tablero con llaves impresas en 3D para controlar los permisos del salón: baño, salida y emergencia.",
+          "image": "https://matrix3d.com.mx/assets/img/permisos-900.webp",
+          "category": "Escuelas",
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix3D"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://matrix3d.com.mx/#llaves-de-permiso",
+            "price": "280.00",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://matrix3d.com.mx/#llaves-bano",
+          "name": "Llaves de baño niño y niña",
+          "description": "Juego de dos llaves impresas en 3D con tablero “Baños” para preescolar y primaria.",
+          "image": "https://matrix3d.com.mx/assets/img/banos-900.webp",
+          "category": "Escuelas",
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix3D"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://matrix3d.com.mx/#llaves-bano",
+            "price": "195.00",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://matrix3d.com.mx/#porta-papel-lapiz",
+          "name": "Porta papel higiénico en forma de lápiz",
+          "description": "Porta rollo impreso en 3D con forma de lápiz gigante y ranura frontal.",
+          "image": "https://matrix3d.com.mx/assets/img/lapiz-900.webp",
+          "category": "Hogar",
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix3D"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://matrix3d.com.mx/#porta-papel-lapiz",
+            "price": "300.00",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://matrix3d.com.mx/#llavero-nfc",
+          "name": "Llavero NFC para mascotas y redes sociales",
+          "description": "Llavero impreso en 3D con chip NFC que abre el perfil de contacto de la mascota o tus redes al acercar un celular.",
+          "image": "https://matrix3d.com.mx/assets/img/llaveros-900.webp",
+          "category": "Mascotas",
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix3D"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://matrix3d.com.mx/#llavero-nfc",
+            "price": "70.00",
+            "priceCurrency": "MXN",
+            "availability": "https://schema.org/InStock"
+          }
+        },
+        {
+          "@type": "Product",
+          "@id": "https://matrix3d.com.mx/#figura-por-encargo",
+          "name": "Figura coleccionable por encargo",
+          "description": "Figuras impresas en 3D a pedido, en dos colores y con textura detallada.",
+          "image": "https://matrix3d.com.mx/assets/img/kaiju-900.webp",
+          "category": "Por encargo",
+          "brand": {
+            "@type": "Brand",
+            "name": "Matrix3D"
+          }
+        }
       ]
     },
     {
       "@type": "HowTo",
       "name": "Cómo pedir una pieza impresa en 3D a Matrix3D",
       "step": [
-        { "@type": "HowToStep", "position": 1, "name": "Cuéntanos tu idea", "text": "Por WhatsApp: una foto, un dibujo, medidas o tu archivo STL." },
-        { "@type": "HowToStep", "position": 2, "name": "Te cotizamos y diseñamos", "text": "Te mandamos precio y tiempo de entrega por WhatsApp; al confirmar, modelamos tu pieza en 3D." },
-        { "@type": "HowToStep", "position": 3, "name": "Lo imprimimos", "text": "Capa por capa, en el material y los colores que elegiste." },
-        { "@type": "HowToStep", "position": 4, "name": "Te lo entregamos", "text": "En la zona metropolitana de Guadalajara o por paquetería a todo México." }
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Cuéntanos tu idea",
+          "text": "Por WhatsApp: una foto, un dibujo, medidas o tu archivo STL."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Te cotizamos y diseñamos",
+          "text": "Te mandamos precio y tiempo de entrega por WhatsApp; al confirmar, modelamos tu pieza en 3D."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Lo imprimimos",
+          "text": "Capa por capa, en el material y los colores que elegiste."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Te lo entregamos",
+          "text": "En la zona metropolitana de Guadalajara o por paquetería a todo México."
+        }
       ]
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "¿Cuánto cuesta imprimir una pieza en 3D en Guadalajara?", "acceptedAnswer": { "@type": "Answer", "text": "Depende del tamaño, el material y las horas de impresión. Matrix3D cotiza cada pieza sin costo: manda por WhatsApp una foto, las medidas o tu archivo STL y te respondemos con precio y tiempo de entrega." } },
-        { "@type": "Question", "name": "¿Cuánto tarda un pedido?", "acceptedAnswer": { "@type": "Answer", "text": "Los productos de catálogo están listos de 2 a 5 días hábiles. Las piezas con diseño 3D a medida dependen de la complejidad del modelo; la fecha exacta se confirma al aprobar la cotización." } },
-        { "@type": "Question", "name": "¿Hacen envíos fuera de Guadalajara?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Entregamos en la zona metropolitana de Guadalajara y enviamos por paquetería a todo México." } },
-        { "@type": "Question", "name": "¿Puedo mandar mi propio archivo para imprimir?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Recibimos archivos STL, 3MF y OBJ. Revisamos que el modelo sea imprimible antes de cotizar." } },
-        { "@type": "Question", "name": "¿Qué pasa si no tengo un archivo 3D, solo la idea?", "acceptedAnswer": { "@type": "Answer", "text": "Lo diseñamos por ti. Con una foto, un dibujo o medidas creamos el modelo 3D y lo imprimimos." } },
-        { "@type": "Question", "name": "¿Con qué materiales imprimen?", "acceptedAnswer": { "@type": "Answer", "text": "PLA para piezas decorativas, PETG para piezas resistentes al uso diario y TPU para piezas flexibles." } },
-        { "@type": "Question", "name": "¿Para qué sirven las llaves de permiso en un salón de clases?", "acceptedAnswer": { "@type": "Answer", "text": "Controlan las salidas del salón sin interrumpir la clase: cada llave es un permiso (baño, salida o emergencia). El alumno la toma al salir y la regresa al volver, así el docente sabe quién está fuera y a dónde fue." } },
-        { "@type": "Question", "name": "¿Cómo funciona el llavero NFC para mascotas?", "acceptedAnswer": { "@type": "Answer", "text": "El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con el nombre de la mascota y los datos de contacto del dueño. No usa batería ni requiere aplicación; funciona con iPhone XS o más reciente y con Android con NFC." } }
+        {
+          "@type": "Question",
+          "name": "¿Cuánto cuesta imprimir una pieza en 3D en Guadalajara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Depende del tamaño, el material y las horas de impresión. Matrix3D cotiza cada pieza sin costo: manda por WhatsApp una foto, las medidas o tu archivo STL y te respondemos con precio y tiempo de entrega."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cuánto tarda un pedido?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los productos de catálogo están listos de 2 a 5 días hábiles. Las piezas con diseño 3D a medida dependen de la complejidad del modelo; la fecha exacta se confirma al aprobar la cotización."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Hacen envíos fuera de Guadalajara?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Entregamos en la zona metropolitana de Guadalajara y enviamos por paquetería a todo México."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo mandar mi propio archivo para imprimir?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Recibimos archivos STL, 3MF y OBJ. Revisamos que el modelo sea imprimible antes de cotizar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si no tengo un archivo 3D, solo la idea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lo diseñamos por ti. Con una foto, un dibujo o medidas creamos el modelo 3D y lo imprimimos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Con qué materiales imprimen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PLA para piezas decorativas, PETG para piezas resistentes al uso diario y TPU para piezas flexibles."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Para qué sirven las llaves de permiso en un salón de clases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Controlan las salidas del salón sin interrumpir la clase: cada llave es un permiso (baño, salida o emergencia). El alumno la toma al salir y la regresa al volver, así el docente sabe quién está fuera y a dónde fue."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona el llavero NFC para mascotas?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con el nombre de la mascota y los datos de contacto del dueño. No usa batería ni requiere aplicación; funciona con iPhone XS o más reciente y con Android con NFC."
+          }
+        }
       ]
     }
   ]
@@ -395,6 +624,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </div>
     <div class="works__viewport" data-works-viewport>
       <ul class="works__track" data-works-track>
+
         <li class="piece" id="llaves-de-permiso">
           <div class="piece__stage">
             <img src="assets/img/permisos-480.webp" srcset="assets/img/permisos-480.webp 480w, assets/img/permisos-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="418" height="480" alt="Tablero de permisos impreso en 3D con tres llaves: emergencia, baño y salida" loading="lazy" decoding="async" data-piece-img>
@@ -404,9 +634,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <p class="piece__cat">Escuelas</p>
             <h3>Llaves de permiso para salón de clases</h3>
             <p>El alumno toma la llave de baño, salida o emergencia y el docente sabe quién salió y a dónde.</p>
+            <p class="piece__price"><strong>Precio: $280 MXN</strong></p>
             <a class="link" data-wa="permisos" href="https://wa.me/523115920483" target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
         </li>
+
         <li class="piece" id="llaves-bano">
           <div class="piece__stage">
             <img src="assets/img/banos-480.webp" srcset="assets/img/banos-480.webp 480w, assets/img/banos-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="418" height="480" alt="Tablero Baños impreso en 3D con dos llaves, azul con figura de niño y rosa con figura de niña" loading="lazy" decoding="async" data-piece-img>
@@ -416,9 +648,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <p class="piece__cat">Escuelas</p>
             <h3>Llaves de baño niño y niña</h3>
             <p>Dos llaves gigantes con tablero “Baños”, para preescolar y primaria. Personalizable con el nombre del grupo.</p>
+            <p class="piece__price"><strong>Precio: $195 MXN</strong></p>
             <a class="link" data-wa="banos" href="https://wa.me/523115920483" target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
         </li>
+
         <li class="piece" id="porta-papel-lapiz">
           <div class="piece__stage">
             <img src="assets/img/lapiz-480.webp" srcset="assets/img/lapiz-480.webp 480w, assets/img/lapiz-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="455" height="480" alt="Porta papel higiénico impreso en 3D con forma de lápiz amarillo y ranura frontal" loading="lazy" decoding="async" data-piece-img>
@@ -428,9 +662,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <p class="piece__cat">Hogar</p>
             <h3>Porta papel en forma de lápiz</h3>
             <p>Guarda el rollo dentro y lo deja a la vista por la ranura. Para baños escolares, oficinas y casa.</p>
+            <p class="piece__price"><strong>Precio: $300 MXN</strong></p>
             <a class="link" data-wa="lapiz" href="https://wa.me/523115920483" target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
         </li>
+
         <li class="piece" id="llavero-nfc">
           <div class="piece__stage">
             <img src="assets/img/llaveros-480.webp" srcset="assets/img/llaveros-480.webp 480w, assets/img/llaveros-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="480" height="443" alt="Llaveros impresos en 3D con chip NFC: tres con huella de mascota y tres con íconos de redes sociales" loading="lazy" decoding="async" data-piece-img>
@@ -440,9 +676,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <p class="piece__cat">Mascotas y redes</p>
             <h3>Llaveros con chip NFC</h3>
             <p>Un toque con el celular abre el perfil de tu mascota o tus redes sociales. Sin batería y sin app.</p>
+            <p class="piece__price"><strong>Precio: $70 MXN</strong></p>
             <a class="link" data-wa="nfc" href="https://wa.me/523115920483" target="_blank" rel="noopener">Pedir por WhatsApp</a>
           </div>
         </li>
+
         <li class="piece" id="figura-por-encargo">
           <div class="piece__stage">
             <img src="assets/img/kaiju-480.webp" srcset="assets/img/kaiju-480.webp 480w, assets/img/kaiju-900.webp 900w" sizes="(min-width: 900px) 30vw, 70vw" width="435" height="480" alt="Figura de monstruo kaiju impresa en 3D por encargo en filamento morado y azul" loading="lazy" decoding="async" data-piece-img>
@@ -455,96 +693,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe>
             <a class="link" data-wa="figura" href="https://wa.me/523115920483" target="_blank" rel="noopener">Cotizar una figura</a>
           </div>
         </li>
+
       </ul>
     </div>
     <div class="works__progress wrap" aria-hidden="true"><i data-works-bar></i></div>
-  </div>
-</section>
-
-<!-- ============================ ESCUELAS ============================ -->
-<section class="section wrap school" id="escuelas" aria-labelledby="escuelas-titulo">
-  <div class="school__grid">
-    <div class="school__art" data-rise>
-      <img src="assets/img/permisos-480.webp" srcset="assets/img/permisos-480.webp 480w, assets/img/permisos-900.webp 900w" sizes="(min-width: 900px) 40vw, 80vw" width="418" height="480" alt="Tablero de permisos impreso en 3D con llaves de emergencia, baño y salida" loading="lazy" decoding="async">
-      <span class="plinth" aria-hidden="true"><i></i><i></i><i></i></span>
-    </div>
-    <div>
-      <p class="kicker">Para escuelas</p>
-      <h2 id="escuelas-titulo">Llaves de permiso: orden en el salón sin interrumpir la clase</h2>
-      <p class="lead">Cada llave es un permiso. El docente ve de un vistazo quién salió y a dónde, y nadie tiene que pedir permiso en voz alta.</p>
-      <ol class="steps" data-steps>
-        <li><b>1</b><span>El alumno toma la llave del permiso que necesita: baño, salida o emergencia.</span></li>
-        <li><b>2</b><span>Mientras la llave no está en el tablero, nadie más sale con ese permiso.</span></li>
-        <li><b>3</b><span>Al regresar la cuelga de nuevo y el permiso queda libre.</span></li>
-      </ol>
-      <div class="row">
-        <a class="btn" data-wa="escuelas" href="https://wa.me/523115920483" target="_blank" rel="noopener">Cotizar para mi escuela</a>
-        <a class="btn btn--ghost" href="#llaves-bano">Ver modelos</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================ NFC ============================ -->
-<section class="story story--alt" id="nfc" aria-labelledby="nfc-titulo" data-nfc>
-  <div class="story__stage">
-    <div class="story__grid wrap">
-      <div class="story__art">
-        <svg class="nfc" viewBox="0 0 420 440" role="img" aria-labelledby="nfc-t">
-          <title id="nfc-t">Un celular lee el llavero NFC de una mascota y muestra los datos de contacto del dueño</title>
-          <!-- celular con grosor -->
-          <g class="phone" data-phone>
-            <rect class="phone__depth" x="232" y="40" width="160" height="320" rx="26"/>
-            <rect class="phone__body" x="224" y="32" width="160" height="320" rx="26"/>
-            <rect class="phone__screen" x="234" y="44" width="140" height="296" rx="18"/>
-            <rect class="phone__notch" x="284" y="50" width="40" height="8" rx="4"/>
-            <!-- Estado final en el HTML: sin JS o con movimiento reducido el
-                 perfil se ve dentro del celular. El JS lo oculta al iniciar
-                 el timeline (fromTo) y lo hace aparecer con el scroll. -->
-            <g class="phone__card" data-phone-card>
-              <rect class="card" x="246" y="96" width="116" height="196" rx="12"/>
-              <circle class="avatar" cx="304" cy="136" r="24"/>
-              <path class="paw" d="M296 136a5 6 0 1 1 0 .1zm16 0a5 6 0 1 1 0 .1zM290 128a3.6 4.4 0 1 1 0 .1zm28 0a3.6 4.4 0 1 1 0 .1zM304 140c8 0 11 8 9 10-3 3-6 1-9 1s-6 2-9-1c-2-2 1-10 9-10z"/>
-              <text class="name" x="304" y="184" text-anchor="middle">Luna</text>
-              <text class="sub" x="304" y="202" text-anchor="middle">Si me encuentras,</text>
-              <text class="sub" x="304" y="216" text-anchor="middle">avisa a mi familia</text>
-              <rect class="call" x="258" y="236" width="92" height="30" rx="15"/>
-              <text class="call__t" x="304" y="256" text-anchor="middle">Llamar</text>
-            </g>
-          </g>
-          <!-- ondas NFC (trazo, sin brillo) -->
-          <g class="waves" data-waves fill="none">
-            <path d="M200 196a28 28 0 0 1 0 40"/>
-            <path d="M210 182a46 46 0 0 1 0 68"/>
-            <path d="M220 168a64 64 0 0 1 0 96"/>
-          </g>
-          <!-- llavero con huella (con grosor) -->
-          <g class="tag" data-tag>
-            <path class="tag__ring" d="M96 120a22 22 0 1 1 1 0" fill="none"/>
-            <g class="tag__body">
-              <path class="tag__depth" d="M96 150c40 0 64 30 64 66s-28 70-64 70-64-34-64-70 24-66 64-66z" transform="translate(6 6)"/>
-              <path class="tag__shape" d="M96 150c40 0 64 30 64 66s-28 70-64 70-64-34-64-70 24-66 64-66z"/>
-              <circle class="tag__hole" cx="96" cy="166" r="7"/>
-              <g class="tag__paw"><ellipse cx="76" cy="206" rx="9" ry="11"/><ellipse cx="116" cy="206" rx="9" ry="11"/><ellipse cx="62" cy="230" rx="7" ry="9"/><ellipse cx="130" cy="230" rx="7" ry="9"/><path d="M96 220c18 0 26 20 20 26-6 6-12 2-20 2s-14 4-20-2c-6-6 2-26 20-26z"/></g>
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="story__copy">
-        <p class="kicker">Mascotas</p>
-        <h2 id="nfc-titulo">Un llavero que lleva a tu mascota de vuelta a casa</h2>
-        <p class="lead">El llavero tiene un chip NFC. Si alguien encuentra a tu mascota, acerca su celular y se abre una página con su nombre y tus datos de contacto.</p>
-        <ul class="facts">
-          <li><b>Sin batería</b><span>El chip se alimenta del celular que lo lee.</span></li>
-          <li><b>Sin app</b><span>Funciona con iPhone XS o más reciente y Android con NFC.</span></li>
-          <li><b>También para redes</b><span>Un toque y abre tu Instagram, TikTok o tarjeta de presentación.</span></li>
-        </ul>
-        <div class="row">
-          <a class="btn" data-wa="nfc" href="https://wa.me/523115920483" target="_blank" rel="noopener">Pedir mi llavero</a>
-          <a class="btn btn--ghost" href="https://example.com/mascota" target="_blank" rel="noopener">Ver perfil de ejemplo</a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
